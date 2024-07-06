@@ -1,7 +1,7 @@
 $white: #ffffff;
 $black: #000000;
 $primary1: #f07b26;
-$primary2: #252525;
+$primary2: #274135;
 $textCol: #1f1f1f;
 
 @mixin main-font {
@@ -119,6 +119,7 @@ a:focus {
 }
 
 .header_section {
+  width: 100%;
   .header_top {
     padding: 15px 0;
     background-color: $primary2;
@@ -415,7 +416,9 @@ a:focus {
 
   #customCarousel1 {
     width: 100%;
-    position: unset;
+    position: absolute;
+    top:0px;
+    left:0px;
   }
 
   .detail-box {

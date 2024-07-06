@@ -4101,7 +4101,7 @@ input[type="button"].btn-block {
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #495057;
+  color: #EBD1C8;
   background-color: #fff;
   border-color: #dee2e6 #dee2e6 #fff;
 }
@@ -4481,7 +4481,7 @@ input[type="button"].btn-block {
 }
 
 .navbar-light .navbar-toggler {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.5);
   border-color: rgba(0, 0, 0, 0.1);
 }
 

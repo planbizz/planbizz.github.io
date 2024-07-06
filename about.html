@@ -12,7 +12,7 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Fonicy</title>
+  <title>Plannbiz</title>
 
 
   <!-- bootstrap core css -->
@@ -31,6 +31,49 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+  <style>
+    .about-us{
+      width: 100%;
+      background-color: #071a2b;
+      min-height: 500px;
+      padding: 20px;
+      margin: 20px 0px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #FFF;
+      border-radius: 8px;
+      gap: 20px;
+    }
+    .image-holder{
+      padding: 30px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #2a2a2a;
+    }
+    .image-holder img{
+      height: 120px;
+      width: 120px;
+      border-radius: 50%;
+      object-fit: contain;
+      background-color: #eff4b4;
+    }
+    .name{
+      font-size: 24px;
+      text-align: center;
+      margin: 10px 0px;
+    }
+    .position{
+      font-size: 18px;
+      text-align: center;
+      margin: 10px 0px;
+      color: #a4a4a3;
+    }
+    
+  </style>
 
 </head>
 
@@ -58,13 +101,13 @@
             <a href="">
               <i class="fa fa-phone" aria-hidden="true"></i>
               <span>
-                Call : +01 123455678990
+                Call : +91-9538888160
               </span>
             </a>
             <a href="">
               <i class="fa fa-envelope" aria-hidden="true"></i>
               <span>
-                Email : demo@gmail.com
+                Email : deepakplannbiz@gmail.com
               </span>
             </a>
             <a href="">
@@ -94,7 +137,7 @@
         <div class="container-fluid">
           <nav class="navbar navbar-expand-lg custom_nav-container ">
             <a class="navbar-brand" href="index.html">
-              <img src="images/logo.png" alt="">
+              <img src="images/logo.jpeg" alt="">
             </a>
             </a>
 
@@ -107,29 +150,26 @@
                 <li class="nav-item ">
                   <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <a class="nav-link" href="service.html">Services</a>
+                </li> -->
+                <li class="nav-item">
+                  <a class="nav-link" href="project.html">Projects</a>
                 </li>
                 <li class="nav-item active">
                   <a class="nav-link" href="about.html"> About</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="project.html">Project</a>
-                </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <a class="nav-link" href="testimonial.html">Testimonial</a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                   <a class="nav-link" href="contact.html">Contact Us</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"> Login</a>
-                </li>
-                <form class="form-inline">
+              <!-- <form class="form-inline">
                   <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
                     <i class="fa fa-search" aria-hidden="true"></i>
                   </button>
-                </form>
+                </form> -->
               </ul>
               <div class="quote_btn-container">
                 <a href="" class="quote_btn">
@@ -147,52 +187,107 @@
   <!-- about section -->
 
   <section class="about_section layout_padding">
-    <div class="container  ">
+    <div class="container">
+      <div class="heading_container">
+        <h1>
+          Our Team
+        </h1>
+      </div>
+
       <div class="row">
-        <div class="col-md-6">
-          <div class="detail-box">
-            <div class="heading_container">
-              <h2>
-                About Us
-              </h2>
+         <div class="about-us">
+            <div>
+                <div class="image-holder">
+                    <img src="/images/vishnu.png" alt="Dr Vishnuvardhana" />
+                </div>
+                <div class="about-founder">
+                  <h2 class="name">Dr.Vishnuvardhana D</h2>
+                  <h3 class="position">Founder & Managing Director</h2>
+                  <p class="description"> Dr. Vishnuvardhana D is an Agriculture Graduate with a Doctorate in Plant Pathology, bringing a wealth of knowledge and experience in agribusiness and retail industries. With a successful corporate career spanning two decades, Dr. Vishnuvardhana D transitioned into entrepreneurship and founded Fampro Agribusiness Pvt. Ltd. in 2017. Recognizing evolving business dynamics, he subsequently established Carica Retail Private Limited in March 2020. This venture focuses on developing FMCG food products across multiple categories, particularly targeting rural markets in India through collaborations with Farmers' Producer Organizations (FPOs).
+
+                    Driven by a passion for enhancing agricultural practices and rural livelihoods, Dr. Vishnuvardhana D leverages his extensive industry expertise to guide and support diverse business verticals. This journey has culminated in the formation of PlannBiz Consulting Pvt. Ltd., where he and his team offer strategic insights and advisory services to foster growth and sustainability across sectors.
+                             </p>
+                </div>
             </div>
-            <p>
-              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-              in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-              are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-              the middle of text. All
+
+         </div>
+         <div class="about-us">
+          <div>
+              <div class="image-holder">
+                  <img src="/images/dharmendra.png" alt="Dr Dharmendra" />
+              </div>
+              <div class="about-founder">
+                <h2 class="name">Dharmendra P</h2>
+                <h3 class="position">Founder & Chief Strategy Office</h2>
+                <p class="description">  Experienced in chemical, pharmaceutical, nutraceutical, and food processing industries with a strong focus on strategy and business development.
+                </p>
+              </div>
+          </div>
+
+       </div>
+       <div class="about-us">
+        <div>
+            <div class="image-holder">
+                <img src="/images/deepak.jpeg" alt="Dr Deepak" />
+            </div>
+            <div class="about-founder">
+              <h2 class="name">Deepak Kaverappa</h2>
+              <h3 class="position">Founder & Director</h2>
+              <p class="description">  Expertise in FMCG procurement, buying, sourcing, and category management across retail and e-commerce sectors.
+              </p>
+            </div>
+        </div>
+
+     </div>
+     <div class="about-us">
+      <div>
+          <div class="image-holder">
+              <img src="/images/inder.png" alt="Dr Inder" />
+          </div>
+          <div class="about-founder">
+            <h2 class="name">Inder Chand Singhvi </h2>
+            <h3 class="position">Chief Liaising Officer</h2>
+            <p class="description"> Inder has about 25 Years of Experience being an entreprenure and running his own Granite Processing Factory at Harohalli Industrial Area, and he is quite experienced in Liaising with various govt departments specially Industries and Commerce and KIADB department
             </p>
-            <a href="">
-              Read More
-            </a>
           </div>
+      </div>
+
+   </div>
+   <div class="about-us">
+    <div>
+        <div class="image-holder">
+            <img src="/images/aseem.png" alt="Dr Inder" />
         </div>
-        <div class="col-md-6 ">
-          <div class="img-box">
-            <img src="images/about-img.jpg" alt="">
-          </div>
+        <div class="about-founder">
+          <h2 class="name">Aseem Vohra</h2>
+          <h3 class="position">Director – operations</h2>
+          <p class="description"> Engineering graduate from Bangalore University with an MBA from Symbiosis Institute, Pune, bringing over two decades of extensive experience in Sales, Marketing, and Business Development. Previously, I served as Head of Store Operations for the convenience format in Delhi NCR at Future Group. Prior to that, I held the position of Operations Head at Wadhawan Food Retail (SangamDirect/SabkaBazar) in Delhi NCR.
+          </p>
         </div>
+    </div>
+
+ </div>
 
       </div>
     </div>
   </section>
 
   <!-- end about section -->
-
   <!-- info section -->
-  <section class="info_section">
+  <section class="info_section ">
+
     <div class="container">
       <div class="contact_nav">
         <a href="">
           <i class="fa fa-phone" aria-hidden="true"></i>
           <span>
-            Call : +01 123455678990
+            Call : +91-9538888160
           </span>
         </a>
         <a href="">
           <i class="fa fa-envelope" aria-hidden="true"></i>
           <span>
-            Email : demo@gmail.com
+            Email : deepakplannbiz@gmail.com
           </span>
         </a>
         <a href="">
@@ -212,16 +307,16 @@
               </h4>
               <div class="info_links_menu">
                 <a class="" href="index.html">Home <span class="sr-only">(current)</span></a>
-                <a class="" href="service.html">Services</a>
+                <!-- <a class="" href="service.html">Services</a> -->
                 <a class="" href="about.html"> About</a>
                 <a class="" href="project.html">Project</a>
-                <a class="" href="testimonial.html">Testimonial</a>
+                <!-- <a class="" href="testimonial.html">Testimonial</a> -->
                 <a class="" href="contact.html">Contact Us</a>
               </div>
             </div>
           </div>
           <div class="col-sm-6 col-md-4 col-lg-3 mx-auto">
-            <div class="info_post">
+            <!-- <div class="info_post">
               <h5>
                 INSTAGRAM FEEDS
               </h5>
@@ -245,7 +340,7 @@
                   <img src="images/instagram.jpg" alt="">
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
           <div class="col-md-4">
             <div class="info_form">
@@ -267,7 +362,7 @@
           <div class="col-md-2">
             <div class="info_logo">
               <a href="">
-                <img src="images/logo2.png" alt="">
+                <img src="images/logo.jpeg" alt="">
               </a>
             </div>
           </div>
@@ -294,16 +389,18 @@
   </section>
   <!-- end info_section -->
 
+
   <!-- footer section -->
   <footer class="footer_section">
     <div class="container">
       <p>
         &copy; <span id="displayYear"></span> All Rights Reserved By
-        <a href="https://html.design/">Free Html Templates</a>
+        <a href="index.html">Plannbiz</a>
       </p>
     </div>
   </footer>
   <!-- footer section -->
+
 
   <!-- jQery -->
   <script src="js/jquery-3.4.1.min.js"></script>

@@ -12,11 +12,12 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Fonicy</title>
+  <title>Plannbizz</title>
 
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js" integrity="sha512-vc58qvvBdrDR4etbxMdlTt4GBQk1qjvyORR2nrsPsFPyrs+/u5c3+1Ct6upOgdZoIl7eq6k3a1UPDSNAQi/32A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -31,6 +32,72 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+  <style>
+     .info-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: #f7f9fc;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        .info-box {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            width: 250px;
+        }
+        .info-box h2 {
+            font-size: 48px;
+            font-weight: 700;
+            margin: 0;
+            color: #f07b26;
+        }
+        .info-box p {
+            margin: 5px 0 0;
+            font-size: 1em;
+            color: #191919;
+        }
+
+table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        overflow-x: auto;
+        width: max-content;
+    }
+    th, td {
+        border: 1px solid #dddddd;
+        text-align: center;
+        padding: 8px;
+        white-space: nowrap; /* Prevent text wrapping */
+        white-space: nowrap; /* Prevent text wrapping */
+        overflow: hidden; /* Hide content that exceeds cell width */
+        text-overflow: ellipsis;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    /* Responsive styling */
+    @media (max-width: 600px) {
+        table {
+            table-layout: fixed; /* Fix column width */
+            overflow-x: auto;
+            width: max-content;
+
+        }
+        th, td {
+            padding: 6px; /* Smaller padding */
+            font-size: 12px; /* Smaller font size */
+        }
+    }
+
+  </style>
 
 </head>
 
@@ -39,7 +106,7 @@
   <div class="hero_area">
     <!-- header section strats -->
     <header class="header_section">
-      <div class="header_top">
+      <!-- <div class="header_top">
         <div class="container-fluid header_top_container">
           <div class="lang_box dropdown">
             <a href="#" title="Language" class="nav-link" data-toggle="dropdown" aria-expanded="true">
@@ -58,13 +125,13 @@
             <a href="">
               <i class="fa fa-phone" aria-hidden="true"></i>
               <span>
-                Call : +01 123455678990
+                Call : +91-9538888160
               </span>
             </a>
             <a href="">
               <i class="fa fa-envelope" aria-hidden="true"></i>
               <span>
-                Email : demo@gmail.com
+                Email : deepakplannbiz@gmail.com
               </span>
             </a>
             <a href="">
@@ -89,12 +156,12 @@
             </a>
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="header_bottom">
         <div class="container-fluid">
           <nav class="navbar navbar-expand-lg custom_nav-container ">
             <a class="navbar-brand" href="index.html">
-              <img src="images/logo.png" alt="">
+              <img src="images/logo.jpeg" alt="">
             </a>
             </a>
 
@@ -107,29 +174,27 @@
                 <li class="nav-item active">
                   <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <a class="nav-link" href="service.html">Services</a>
+                </li> -->
+                <li class="nav-item">
+                  <a class="nav-link" href="project.html">Projects</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="about.html"> About</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="project.html">Project</a>
-                </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <a class="nav-link" href="testimonial.html">Testimonial</a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                   <a class="nav-link" href="contact.html">Contact Us</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"> Login</a>
-                </li>
-                <form class="form-inline">
+              
+              <!-- <form class="form-inline">
                   <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
                     <i class="fa fa-search" aria-hidden="true"></i>
                   </button>
-                </form>
+                </form> -->
               </ul>
               <div class="quote_btn-container">
                 <a href="" class="quote_btn">
@@ -143,7 +208,9 @@
     </header>
     <!-- end header section -->
     <!-- slider section -->
-    <section class="slider_section ">
+    
+    <section class="slider_section">
+      <div class="background"></div>
       <div id="customCarousel1" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -152,15 +219,15 @@
                 <div class="col-md-10 mx-auto">
                   <div class="detail-box">
                     <h1>
-                      ARCHITECT <br>
-                      BUILDER CONSTRUCTION <br>
-                      SERVICES
+                      WELCOME TO <br>
+                      PLANBIZZ CONSULTING <br>
+                      PVT LTD
                     </h1>
                     <div class="btn-box">
-                      <a href="" class="btn1">
+                      <a href="/contact.html" style="z-index: 100;" class="btn1">
                         Contact Us
                       </a>
-                      <a href="" class="btn2">
+                      <a href="/about.html" style="z-index: 100;" class="btn2">
                         About Us
                       </a>
                     </div>
@@ -169,7 +236,7 @@
               </div>
             </div>
           </div>
-          <div class="carousel-item">
+          <!-- <div class="carousel-item">
             <div class="container ">
               <div class="row">
                 <div class="col-md-10 mx-auto">
@@ -260,21 +327,110 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
-        <ol class="carousel-indicators">
+        <!-- <ol class="carousel-indicators">
           <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
           <li data-target="#customCarousel1" data-slide-to="1"></li>
           <li data-target="#customCarousel1" data-slide-to="2"></li>
           <li data-target="#customCarousel1" data-slide-to="3"></li>
           <li data-target="#customCarousel1" data-slide-to="4"></li>
-        </ol>
+        </ol> -->
       </div>
-
     </section>
+
     <!-- end slider section -->
   </div>
 
+  <!-- Projects -->
+  <section class="service_section layout_padding" style="margin-top: 60px;">
+    <div class="service_container">
+      <div class="container">
+        <div class="heading_container">
+          <h1>
+            Projects
+          </h1>
+        </div>
+        <a href="/project.html">
+        <div class="info-container">
+            <div class="info-box">
+                <h2 class="count">150</h2>
+                <p>Projects Completed</p>
+            </div>
+          <div class="info-box">
+              <h2 class="count">799</h2>
+              <p>Acres Allotted</p>
+          </div>
+          <div class="info-box">
+              <h2 class="count">32.28</h2>
+              <p>Lakh Sq Mtrs</p>
+          </div>
+          <div class="info-box" >
+              
+               <div style="display: flex;"><h2>₹</h2>  <h2 class="count">9089</h2>   <h2> Cr</h2> </div>
+              <p>Project Value</p>
+          </div>
+      </div>
+      
+    </a>
+        <div class="heading_container">
+          <div>
+            <table style="margin-top: 30px;">
+              <thead>
+                <tr>
+                    <th colspan="5">Projects Summary</th>
+                </tr>
+                  <tr>
+                      <th>Category</th>
+                      <th>No. of projects</th>
+                      <th>Area in Acre</th>
+                      <th>Space in Sq Mtrs</th>
+                      <th>Project Value INR Cr.</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>Amenity</td>
+                      <td>12</td>
+                      <td>30.85</td>
+                      <td>124,180</td>
+                      <td>598</td>
+                  </tr>
+                  <tr>
+                      <td>Infrastructure</td>
+                      <td>46</td>
+                      <td>304.67</td>
+                      <td>1,230,867</td>
+                      <td>3,169</td>
+                  </tr>
+                  <tr>
+                      <td>Manufacturing</td>
+                      <td>92</td>
+                      <td>463.75</td>
+                      <td>1,873,550</td>
+                      <td>5,322</td>
+                  </tr>
+                  <tr>
+                      <td><strong>Total</strong></td>
+                      <td><strong>150</strong></td>
+                      <td><strong>799.27</strong></td>
+                      <td><strong>3,228,597</strong></td>
+                      <td><strong>9,089</strong></td>
+                  </tr>
+              </tbody>
+          </table>
+            <div class="btn-box">
+            <div class="btn-box">
+              <a href="/project.html">
+                Read More
+              </a>
+            </div>
+          </div>
+          </div>
+        </div>
+        </div>  
+       </div> 
+      </section>  
 
   <!-- service section -->
 
@@ -283,11 +439,8 @@
       <div class="container ">
         <div class="heading_container">
           <h2>
-            Services
+            Categories
           </h2>
-          <p>
-            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-          </p>
         </div>
         <div class="row">
           <div class="col-md-6 col-lg-3">
@@ -297,15 +450,12 @@
               </div>
               <div class="detail-box">
                 <h5>
-                  Construction
-                  Services
+                  Manufacturing
                 </h5>
                 <p>
-                  fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                  The
-                  point of using L
+                  PlannBiz Consulting has completed 92 projects spanning 464 acres, allocating 18.73 lakh square meters, with a cumulative project value of Rs. 5,322 crores
                 </p>
-                <a href="">
+                <a href="/project.html">
                   Read More
                 </a>
               </div>
@@ -318,29 +468,25 @@
               </div>
               <div class="detail-box">
                 <h5>
-                  Building
-                  Modeling
+                  Amenity
                 </h5>
                 <p>
-                  fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                  The
-                  point of using L
+                  In the Amenity sector, PlannBiz has completed 12 projects covering 14 acres, allocating 1.24 lakh square meters, with a total project value of Rs. 598 crores.
                 </p>
-                <a href="">
+                <a href="/project.html">
                   Read More
                 </a>
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3">
+          <!-- <div class="col-md-6 col-lg-3">
             <div class="box ">
               <div class="img-box">
                 <img src="images/s3.png" alt="">
               </div>
               <div class="detail-box">
                 <h5>
-                  Pre
-                  construction
+                  Infrastructure 
                 </h5>
                 <p>
                   fact that a reader will be distracted by the readable content of a page when looking at its layout.
@@ -352,7 +498,7 @@
                 </a>
               </div>
             </div>
-          </div>
+          </div> -->
           <div class="col-md-6 col-lg-3">
             <div class="box ">
               <div class="img-box">
@@ -360,12 +506,10 @@
               </div>
               <div class="detail-box">
                 <h5>
-                  Management
+                  Infrastructure
                 </h5>
                 <p>
-                  fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                  The
-                  point of using L
+                  PlannBiz Consulting has completed 46 projects across 304 acres, allocating 12.30 lakh square meters, with a total project value of Rs. 3,169 crores.
                 </p>
                 <a href="">
                   Read More
@@ -383,7 +527,7 @@
 
   <!-- about section -->
 
-  <section class="about_section">
+  <section class="about_section" style="margin:30px 0px 50px;">
     <div class="container  ">
       <div class="row">
         <div class="col-md-6">
@@ -394,19 +538,22 @@
               </h2>
             </div>
             <p>
-              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-              in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-              are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-              the middle of text. All
+              Welcome to PlannBiz Consulting Pvt. Ltd., your partner in comprehensive proposal development and business advisory services. We help businesses excel across various verticals, from initial concepts to fully operational projects.
+
+At PlannBiz Consulting, we drive real growth and positive transformation by leveraging our extensive experience and knowledge. We transform enterprise value chains into adaptive ecosystems that sense, learn, and evolve.
+
+In today's market, customers seek experiences, not just products. We enable businesses to build connected, cognitive networks that support innovation at scale. Our solutions empower enterprises to deliver personalized experiences, provide smart products, and build resilient value chains.
+
+Partner with PlannBiz Consulting to turn vision into reality and make a meaningful difference in your business and community.
             </p>
-            <a href="">
+            <a href="/about.html">
               Read More
             </a>
           </div>
         </div>
         <div class="col-md-6 ">
           <div class="img-box">
-            <img src="images/about-img.jpg" alt="">
+            <img src="images/aboutus.jpg" alt="">
           </div>
         </div>
 
@@ -420,7 +567,7 @@
 
   <!-- project section -->
 
-  <section class="project_section layout_padding">
+  <!-- <section class="project_section layout_padding">
     <div class="container">
       <div class="heading_container">
         <h2>
@@ -541,12 +688,12 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- end project section -->
 
   <!-- client section -->
-  <section class="client_section layout_padding">
+  <!-- <section class="client_section layout_padding">
     <div class="container">
       <div class="heading_container heading_center">
         <h2>
@@ -668,12 +815,12 @@
         <li data-target="#customCarousel2" data-slide-to="2"></li>
       </ol>
     </div>
-  </section>
+  </section> -->
   <!-- end client section -->
 
   <!-- why us section -->
 
-  <section class="why_us_section layout_padding">
+  <!-- <section class="why_us_section layout_padding">
     <div class="container">
       <div class="heading_container">
         <h2>
@@ -736,12 +883,12 @@
         </a>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- end why us section -->
 
   <!-- contact section -->
-  <section class="contact_section layout_padding-bottom">
+  <!-- <section style="margin-top: 40px;" class="contact_section layout_padding-bottom">
     <div class="container-fluid">
       <div class="col-lg-4 col-md-5 offset-md-1">
         <div class="heading_container">
@@ -783,7 +930,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <!-- end contact section -->
 
   <!-- info section -->
@@ -794,13 +941,13 @@
         <a href="">
           <i class="fa fa-phone" aria-hidden="true"></i>
           <span>
-            Call : +01 123455678990
+            Call : +91-9538888160
           </span>
         </a>
         <a href="">
           <i class="fa fa-envelope" aria-hidden="true"></i>
           <span>
-            Email : demo@gmail.com
+            Email : deepakplannbiz@gmail.com
           </span>
         </a>
         <a href="">
@@ -820,16 +967,16 @@
               </h4>
               <div class="info_links_menu">
                 <a class="" href="index.html">Home <span class="sr-only">(current)</span></a>
-                <a class="" href="service.html">Services</a>
+                <!-- <a class="" href="service.html">Services</a> -->
                 <a class="" href="about.html"> About</a>
                 <a class="" href="project.html">Project</a>
-                <a class="" href="testimonial.html">Testimonial</a>
+                <!-- <a class="" href="testimonial.html">Testimonial</a> -->
                 <a class="" href="contact.html">Contact Us</a>
               </div>
             </div>
           </div>
           <div class="col-sm-6 col-md-4 col-lg-3 mx-auto">
-            <div class="info_post">
+            <!-- <div class="info_post">
               <h5>
                 INSTAGRAM FEEDS
               </h5>
@@ -853,7 +1000,7 @@
                   <img src="images/instagram.jpg" alt="">
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
           <div class="col-md-4">
             <div class="info_form">
@@ -875,7 +1022,7 @@
           <div class="col-md-2">
             <div class="info_logo">
               <a href="">
-                <img src="images/logo2.png" alt="">
+                <img src="images/logo.jpeg" alt="">
               </a>
             </div>
           </div>
@@ -908,7 +1055,7 @@
     <div class="container">
       <p>
         &copy; <span id="displayYear"></span> All Rights Reserved By
-        <a href="https://html.design/">Free Html Templates</a>
+        <a href="index.html">Plannbiz</a>
       </p>
     </div>
   </footer>
@@ -932,7 +1079,19 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
   </script>
   <!-- End Google Map -->
-
+  <script>
+    $('.count').each(function () {
+    $(this).prop('Counter',0).animate({
+        Counter: $(this).text()
+    }, {
+        duration: 10000,
+        easing: 'swing',
+        step: function (now) {
+            $(this).text(Math.ceil(now));
+        }
+    });
+});
+  </script>
 </body>
 
 </html>

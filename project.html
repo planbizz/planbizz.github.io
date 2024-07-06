@@ -12,7 +12,7 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Fonicy</title>
+  <title>Plannbiz</title>
 
 
   <!-- bootstrap core css -->
@@ -31,7 +31,54 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+  <style>
+        .item {
+            margin-right: 10px;
+        }
+        .item.active {
+            font-weight: bold;
+        }
+        .content .item {
+            display: none;
+        }
+        .content .item.active {
+            display: block;
+        }
 
+    table {
+            margin-top: 30px;
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 8px;
+            white-space: nowrap; /* Prevent text wrapping */
+            white-space: nowrap; /* Prevent text wrapping */
+            overflow: hidden; /* Hide content that exceeds cell width */
+            text-overflow: ellipsis;
+            max-width: 80px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        /* Responsive styling */
+        @media (max-width: 600px) {
+            table {
+                table-layout: fixed; /* Fix column width */
+                table-layout: fixed; /* Fix column width */
+                overflow-x: auto;
+                width: max-content;
+            }
+            th, td {
+                padding: 6px; /* Smaller padding */
+                font-size: 12px; /* Smaller font size */
+            }
+        }
+    
+      </style>
 </head>
 
 <body class="sub_page">
@@ -58,13 +105,13 @@
             <a href="">
               <i class="fa fa-phone" aria-hidden="true"></i>
               <span>
-                Call : +01 123455678990
+                Call : +91-9538888160
               </span>
             </a>
             <a href="">
               <i class="fa fa-envelope" aria-hidden="true"></i>
               <span>
-                Email : demo@gmail.com
+                Email : deepakplannbiz@gmail.com
               </span>
             </a>
             <a href="">
@@ -94,7 +141,7 @@
         <div class="container-fluid">
           <nav class="navbar navbar-expand-lg custom_nav-container ">
             <a class="navbar-brand" href="index.html">
-              <img src="images/logo.png" alt="">
+              <img src="images/logo.jpeg" alt="">
             </a>
             </a>
 
@@ -107,29 +154,28 @@
                 <li class="nav-item ">
                   <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <a class="nav-link" href="service.html">Services</a>
+                </li> -->
+                <li class="nav-item active">
+                  <a class="nav-link" href="project.html">Projects</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="about.html"> About</a>
                 </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="project.html">Project</a>
-                </li>
-                <li class="nav-item">
+             
+                <!-- <li class="nav-item">
                   <a class="nav-link" href="testimonial.html">Testimonial</a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                   <a class="nav-link" href="contact.html">Contact Us</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"> Login</a>
-                </li>
-                <form class="form-inline">
+              
+              <!-- <form class="form-inline">
                   <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
                     <i class="fa fa-search" aria-hidden="true"></i>
                   </button>
-                </form>
+                </form> -->
               </ul>
               <div class="quote_btn-container">
                 <a href="" class="quote_btn">
@@ -156,116 +202,3318 @@
       </div>
       <div class="carousel-wrap ">
         <div class="filter_box">
-          <h6>
+          <h6 style="margin-bottom: 20px;">
             Category filter
           </h6>
-          <nav class="owl-filter-bar">
-            <a href="#" class="item active" data-owl-filter="*">All</a>
-            <a href="#" class="item" data-owl-filter=".painting">Painting</a>
-            <a href="#" class="item" data-owl-filter=".reconstruction">Reconstruction </a>
-            <a href="#" class="item" data-owl-filter=".repair">Repairs </a>
-            <a href="#" class="item" data-owl-filter=".residential">Residential </a>
-            <a href="#" class="item" data-owl-filter=".styling">Styling </a>
+          <nav class="" style="padding-left: 20px;">
+            <a href="#" class="item all" data-filter="all" onclick="filterItems('all')">All</a>
+            <a href="#" class="item amenity" data-filter="amenity" onclick="filterItems('amenity')">Amenity</a>
+            <a href="#" class="item infrastructure" data-filter="infrastructure" onclick="filterItems('infrastructure')">Infrastructure</a>
+            <a href="#" class="item manufacturing" data-filter="manufacturing" onclick="filterItems('manufacturing')">Manufacturing</a>
+        
           </nav>
         </div>
+  
+        <div id="all" class="filter-item" style="margin-top: 30px;">
+            <div class="box ">
+              <h5 style="font-weight: 700; color:orange; font-size: 32px;">
+               All Project Data
+              </h5>
+              <table>
+                  <tr>
+                      <th>Sl No</th>
+                      <th>Name of the Company</th>
+                      <th>Category</th>
+                      <th>Sub Cat</th>
+                      <th>Project work Activities</th>
+                      <th>Location</th>
+                      <th>Area in Acre</th>
+                      <th>Space in Sft</th>
+                      <th>Project Cost Rs in Crore</th>
+                  </tr>
+                  <tr>
+                      <td>1</td>
+                      <td>Banashankari Chemicals</td>
+                      <td>Amenity</td>
+                      <td>Affordable Housing</td>
+                      <td></td>
+                      <td>KIADB Industrial Area Badanaguppe</td>
+                      <td>9.6</td>
+                      <td>38,784</td>
+                      <td>120.00</td>
+                  </tr>
+                  <tr>
+                      <td>2</td>
+                      <td>Ecoshine Technologies LLP</td>
+                      <td>Amenity</td>
+                      <td>Laboratory</td>
+                      <td></td>
+                      <td>KIADB Industrial Area Sompura Dabaspet</td>
+                      <td>2</td>
+                      <td>8,080</td>
+                      <td>12.00</td>
+                  </tr>
+                  <tr>
+                      <td>3</td>
+                      <td>Fortune Agritech</td>
+                      <td>Amenity</td>
+                      <td>Laboratory</td>
+                      <td></td>
+                      <td>KIADB Industrial Area Gamanagatti Hubli</td>
+                      <td>1.5</td>
+                      <td>6,060</td>
+                      <td>14.00</td>
+                  </tr>
+                  <tr>
+                      <td>4</td>
+                      <td>Naksh Enterprises</td>
+                      <td>Amenity</td>
+                      <td>Petrol Pump</td>
+                      <td></td>
+                      <td>KIADB Insdustrial Area Raichur</td>
+                      <td>0.6</td>
+                      <td>2,000</td>
+                      <td>2.20</td>
+                  </tr>
+                  <tr>
+                      <td>5</td>
+                      <td>Nayana Enterprises</td>
+                      <td>Amenity</td>
+                      <td>Weigh Bridge</td>
+                      <td></td>
+                      <td>KIADB Industrial Area Manvi</td>
+                      <td>0.75</td>
+                      <td>3,000</td>
+                      <td>2.80</td>
+                  </tr>
+                  <tr>
+                      <td>6</td>
+                      <td>Patil and Patil Infrastructure</td>
+                      <td>Amenity</td>
+                      <td>Laboratory</td>
+                      <td></td>
+                      <td>KIADB Industrial Area Sompura Dabaspet</td>
+                      <td>2</td>
+                      <td>8,080</td>
+                      <td>9.00</td>
+                  </tr>
+                  <tr>
+                      <td>7</td>
+                      <td>Sannathi Plant Protection</td>
+                      <td>Amenity</td>
+                      <td>Laboratory</td>
+                      <td></td>
+                      <td>KIADB Industrial Area Gamanagatti Hubli</td>
+                      <td>2.2</td>
+                      <td>8,888</td>
+                      <td>12.00</td>
+                  </tr>
+                  <tr>
+                      <td>8</td>
+                      <td>Shivaganga Enterprises</td>
+                      <td>Amenity</td>
+                      <td>Petrol Pump</td>
+                      <td></td>
+                      <td>KIADB Industrial Area Manvi</td>
+                      <td>2.2</td>
+                      <td>8,888</td>
+                      <td>2.80</td>
+                  </tr>
+                  <tr>
+                      <td>9</td>
+                      <td>Shree Shyam Corp</td>
+                      <td>Amenity</td>
+                      <td>Affordable Housing</td>
+                      <td></td>
+                      <td>KIADB Industrial Area Bidadi</td>
+                      <td>2.6</td>
+                      <td>10,504</td>
+                      <td>28.00</td>
+                  </tr>
+                  <tr>
+                      <td>10</td>
+                      <td>Srujan Infrastructure</td>
+                      <td>Amenity</td>
+                      <td>Affordable Housing</td>
+                      <td></td>
+                      <td>KIADB Industrial Area Bidadi</td>
+                      <td>4.9</td>
+                      <td>19,796</td>
+                      <td>380.00</td>
+                  </tr>
+                  <tr>
+                      <td>11</td>
+                      <td>Tanisha Enterprises</td>
+                      <td>Amenity</td>
+                      <td>Weigh Bridge</td>
+                      <td></td>
+                      <td>KIADB Insdustrial Area Raichur</td>
+                      <td>0.5</td>
+                      <td>2,020</td>
+                      <td>2.80</td>
+                  </tr>
+                  <tr>
+                      <td>12</td>
+                      <td>Vaibhav Enterprises</td>
+                      <td>Amenity</td>
+                      <td>Laboratory</td>
+                      <td></td>
+                      <td>KIADB Industrial Area Gamanagatti Hubli</td>
+                      <td>2</td>
+                      <td>8,080</td>
+                      <td>12.00</td>
+                  </tr>
+                  <tr>
+                      <td>13</td>
+                      <td>Sai International – Whitefield</td>
+                      <td>Infrastructure</td>
+                      <td>Infrastructure -Tech Park</td>
+                      <td>Construction of Tech Park and Cafeteria</td>
+                      <td>KIADB – ITPL whitefoeld</td>
+                      <td>0.75</td>
+                      <td>3,030</td>
+                      <td>28.16</td>
+                  </tr>
+                  <tr>
+                      <td>14</td>
+                      <td>AR tech Park</td>
+                      <td>Infrastructure</td>
+                      <td>Infrastructure -Tech Park</td>
+                      <td>Construction of Technologies Park</td>
+                      <td>KIADB – Industrial Area Devanahalli</td>
+                      <td>5</td>
+                      <td>20,200</td>
+                      <td>190.12</td>
+                  </tr>
+                  <tr>
+                      <td>15</td>
+                      <td>Nandi Constructive</td>
+                      <td>Infrastructure</td>
+                      <td>Infrastructure -Tech Park</td>
+                      <td>Construction of International School at Whitefield</td>
+                      <td>KIADB Industrial Area Whitefield</td>
+                      <td>2.35</td>
+                      <td>9,494</td>
+                      <td>28.32</td>
+                  </tr>
+                  <tr>
+                      <td>16</td>
+                      <td>Nithin Sai India Infra Pvt Limited</td>
+                      <td>Infrastructure</td>
+                      <td>Infrastructure -Tech Park</td>
+                      <td>Construction of Science and Technologies Tech Park at Devanahalli</td>
+                      <td>KIADB Industrial Area Aerospace Park devanahalli</td>
+                      <td>10</td>
+                      <td>40,400</td>
+                      <td>480.23</td>
+                  </tr>
+                  <tr>
+                      <td>17</td>
+                      <td>Soul Space</td>
+                      <td>Infrastructure</td>
+                      <td>Real Estate Feasibility</td>
+                      <td>Feasibility Study to Determine the Suitability of a Proposed 8 Acre residential and Commercial development</td>
+                      <td>Located on Mullur Village Sarjapura Road</td>
+                      <td>8</td>
+                      <td>32,320</td>
+                      <td>268.00</td>
+                  </tr>
+                  <tr>
+                      <td>18</td>
+                      <td>Soul Space</td>
+                      <td>Infrastructure</td>
+                      <td>Real Estate Feasibility</td>
+                      <td>Feasibility Study to Determine the Suitability of a Proposed 81 Acre residential Commercial office Space Data Centre and Hospitality</td>
+                      <td>Manyata Tech Park</td>
+                      <td>81</td>
+                      <td>327,240</td>
+                      <td>766.00</td>
+                  </tr>
+                  <tr>
+                      <td>19</td>
+                      <td>Soul Space</td>
+                      <td>Infrastructure</td>
+                      <td>Real Estate Feasibility</td>
+                      <td>Feasibility Study to Determine the Suitability of a Proposed 31.5 Gunta land for Commercial development</td>
+                      <td>Doddanekkundi Outer Ring Road, Bangalore</td>
+                      <td>31.5</td>
+                      <td>127,260</td>
+                      <td>41.62</td>
+                  </tr>
+                  <tr
 
-        <div class="owl-carousel project_carousel">
-          <div class="item painting">
-            <div class="box">
-              <div class="img-box">
-                <img src="images/project1.jpg" alt="" />
-                <a href="" class="pin_link">
-                  <i class="fa fa-link" aria-hidden="true"></i>
-                </a>
+              >
+                      <td>20</td>
+                      <td>Soul Space</td>
+                      <td>Infrastructure</td>
+                      <td>Real Estate Feasibility</td>
+                      <td>Feasibility Study to Determine the Suitability of a Proposed 31.5 Gunta land for Commercial development</td>
+                      <td>ITPL Whitefield Bangalore</td>
+                      <td>4</td>
+                      <td>16,160</td>
+                      <td>42.61</td>
+                  </tr>
+                  <tr>
+                      <td>21</td>
+                      <td>Attibele Plot</td>
+                      <td>Manufacturing</td>
+                      <td>Manufacturing</td>
+                      <td>General Construction activities</td>
+                      <td>Attibele industrial Area</td>
+                      <td>1.62</td>
+                      <td>6,525</td>
+                      <td>22.70</td>
+                  </tr>
+                  <tr>
+                      <td>22</td>
+                      <td>Essilor</td>
+                      <td>Manufacturing</td>
+                      <td>Manufacturing - Eyewear</td>
+                      <td>Setup New Eyewear Manufacturing Plant</td>
+                      <td>Devanahalli KIADB Industrial Area</td>
+                      <td>12.50</td>
+                      <td>50,500</td>
+                      <td>157.00</td>
+                  </tr>
+                  <tr>
+                      <td>23</td>
+                      <td>Continental Engines</td>
+                      <td>Manufacturing</td>
+                      <td>Manufacturing - Automobile Engines</td>
+                      <td>Set up New Engine Manufacturing Plant</td>
+                      <td>Gauribidanur Industrial Area</td>
+                      <td>24.50</td>
+                      <td>99,190</td>
+                      <td>750.00</td>
+                  </tr>
+                  <tr>
+                      <td>24</td>
+                      <td>Kiran Mazumdar Shaw</td>
+                      <td>Manufacturing</td>
+                      <td>Manufacturing – Pharmaceuticals</td>
+                      <td>General Construction activities</td>
+                      <td>Biocon Limited</td>
+                      <td>10</td>
+                      <td>40,400</td>
+                      <td>90.00</td>
+                  </tr>
+                  <tr>
+                      <td>25</td>
+                      <td>Kiwi Technologies</td>
+                      <td>Manufacturing</td>
+                      <td>Manufacturing - Electronics</td>
+                      <td>Set up new Electronic Manufacturing Plant</td>
+                      <td>Bengaluru</td>
+                      <td>13</td>
+                      <td>52,520</td>
+                      <td>145.12</td>
+                  </tr>
+                  <tr>
+                      <td>26</td>
+                      <td>PAI International</td>
+                      <td>Manufacturing</td>
+                      <td>Manufacturing - Electrical</td>
+                      <td>Setup New Electrical Equipment Manufacturing Plant</td>
+                      <td>KIADB industrial area Tumkur</td>
+                      <td>17.50</td>
+                      <td>70,700</td>
+                      <td>800.00</td>
+                  </tr>
+                  <tr>
+                      <td>27</td>
+                      <td>QVC Buildcon</td>
+                      <td>Manufacturing</td>
+                      <td>Manufacturing - Real Estate</td>
+                      <td>Set up General Construction activities</td>
+                      <td>Gauribidanur Industrial Area</td>
+                      <td>4.95</td>
+                      <td>20,000</td>
+                      <td>87.00</td>
+                  </tr>
+                  <tr>
+                      <td>28</td>
+                      <td>Ravi Kumar Housing</td>
+                      <td>Manufacturing</td>
+                      <td>Manufacturing – Housing</td>
+                      <td>General Construction activities</td>
+                      <td>Yelahanka Industrial Area</td>
+                      <td>3.20</td>
+                      <td>12,920</td>
+                      <td>60.00</td>
+                  </tr>
+                  <tr>
+                      <td>29</td>
+                      <td>Tharun Industries</td>
+                      <td>Manufacturing</td>
+                      <td>Manufacturing – Rubber</td>
+                      <td>Set up New Rubber Manufacturing Plant</td>
+                      <td>KIADB Industrial Area Jigani</td>
+                      <td>5.10</td>
+                      <td>20,200</td>
+                      <td>16.50</td>
+                  </tr>
+                  <tr>
+                      <td>30</td>
+                      <td>Venkat Infrastructure</td>
+                      <td>Manufacturing</td>
+                      <td>Manufacturing – Infrastructure</td>
+                      <td>General Construction activities</td>
+                      <td>Whitefield Industrial Area</td>
+                      <td>4.50</td>
+                      <td>18,000</td>
+                      <td>150.12</td>
+                  </tr>
+                  <tr>
+                      <td>31</td>
+                      <td>Sadashiva Amruth Developers</td>
+                      <td>Real Estate</td>
+                      <td>Real Estate – Housing</td>
+                      <td>Construction of Villas and Apartments</td>
+                      <td>Manyata Tech Park</td>
+                      <td>5</td>
+                      <td>20,200</td>
+                      <td>75.00</td>
+                  </tr>
+                  <tr>
+                      <td>32</td>
+                      <td>Rekha Developers</td>
+                      <td>Real Estate</td>
+                      <td>Real Estate – Housing</td>
+                      <td>Construction of Residential Apartment</td>
+                      <td>Yelahanka</td>
+                      <td>1.95</td>
+                      <td>8,000</td>
+                      <td>10.00</td>
+                  </tr>
+                  <tr>
+                      <td>33</td>
+                      <td>Riyaz Constructions</td>
+                      <td>Real Estate</td>
+                      <td>Real Estate – Housing</td>
+                      <td>Construction of Residential Apartment</td>
+                      <td>Bomanhalli</td>
+                      <td>1.85</td>
+                      <td>7,500</td>
+                      <td>15.00</td>
+                  </tr>
+                  <tr>
+                      <td>34</td>
+                      <td>Srinivas Real Estates</td>
+                      <td>Real Estate</td>
+                      <td>Real Estate – Housing</td>
+                      <td>Construction of Residential Apartment</td>
+                      <td>Jigani</td>
+                      <td>1.10</td>
+                      <td>4,000</td>
+                      <td>5.00</td>
+                  </tr>
+                  <tr>
+                      <td>35</td>
+                      <td>Sobha Developers</td>
+                      <td>Real Estate</td>
+                      <td>Real Estate – Housing</td>
+                      <td>Construction of Residential Apartment</td>
+                      <td>Hoskote</td>
+                      <td>1.00</td>
+                      <td>3,000</td>
+                      <td>8.00</td>
+                  </tr>
+                  <tr>
+                      <td>36</td>
+                      <td>G M Infinite</td>
+                      <td>Real Estate</td>
+                      <td>Real Estate – Housing</td>
+                      <td>Construction of Residential Apartment</td>
+                      <td>Jigani</td>
+                      <td>1.85</td>
+                      <td>6,000</td>
+                      <td>5.00</td>
+                  </tr>
+                  <tr>
+                      <td>37</td>
+                      <td>Raj Constructions</td>
+                      <td>Real Estate</td>
+                      <td>Real Estate – Commercial</td>
+                      <td>Construction of Hotel</td>
+                      <td>Yelahanka</td>
+                      <td>1.20</td>
+                      <td>5,000</td>
+                      <td>10.00</td>
+                  </tr>
+                  <tr>
+                      <td>38</td>
+                      <td>Kumar Builders</td>
+                      <td>Real Estate</td>
+                      <td>Real Estate – Commercial</td>
+                      <td>Construction of Commercial Complex</td>
+                      <td>Whitefield</td>
+                      <td>1.00</td>
+                      <td>4,000</td>
+                      <td>15.00</td>
+                  </tr>
+                  <tr>
+                      <td>39</td>
+                      <td>RK Constructions</td>
+                      <td>Real Estate</td>
+                      <td>Real Estate – Commercial</td>
+                      <td>Construction of Hotel</td>
+                      <td>Hebbal</td>
+                      <td>1.00</td>
+                      <td>4,000</td>
+                      <td>10.00</td>
+                  </tr>
+                  <tr>
+                      <td>40</td>
+                      <td>Classic Constructions</td>
+                      <td>Real Estate</td>
+                      <td>Real Estate – Commercial</td>
+                      <td>Construction of Hotel</td>
+                      <td>JP Nagar
+
+              </td>
+                      <td>0.70</td>
+                      <td>3,000</td>
+                      <td>6.00</td>
+                  </tr>
+                  <tr>
+                      <td>41</td>
+                      <td>Bhoruka Charitable Trust</td>
+                      <td>Trust</td>
+                      <td>Trust</td>
+                      <td>Construction of college</td>
+                      <td>Bangalore</td>
+                      <td>2.20</td>
+                      <td>9,600</td>
+                      <td>12.00</td>
+                  </tr>
+                  <tr>
+                    <td>42</td>
+                    <td>Acme Technologies</td>
+                    <td>IT</td>
+                    <td>Software Development</td>
+                    <td>Setting up new software development center</td>
+                    <td>Electronic City, Bangalore</td>
+                    <td>15</td>
+                    <td>60,000</td>
+                    <td>120.00</td>
+                </tr>
+                <tr>
+                    <td>43</td>
+                    <td>Bright Future Schools</td>
+                    <td>Education</td>
+                    <td>School Construction</td>
+                    <td>New school campus construction</td>
+                    <td>Jayanagar, Bangalore</td>
+                    <td>5</td>
+                    <td>20,000</td>
+                    <td>25.00</td>
+                </tr>
+                <tr>
+                    <td>44</td>
+                    <td>Future Tech</td>
+                    <td>IT</td>
+                    <td>Software Development</td>
+                    <td>Software Development Office Construction</td>
+                    <td>Whitefield, Bangalore</td>
+                    <td>10</td>
+                    <td>40,000</td>
+                    <td>80.00</td>
+                </tr>
+                <tr>
+                    <td>45</td>
+                    <td>Green Energy Ltd.</td>
+                    <td>Energy</td>
+                    <td>Renewable Energy</td>
+                    <td>Solar Plant Construction</td>
+                    <td>Doddaballapur, Bangalore</td>
+                    <td>50</td>
+                    <td>200,000</td>
+                    <td>300.00</td>
+                </tr>
+                <tr>
+                    <td>46</td>
+                    <td>Happy Homes</td>
+                    <td>Real Estate</td>
+                    <td>Housing</td>
+                    <td>Construction of Residential Villas</td>
+                    <td>Koramangala, Bangalore</td>
+                    <td>7</td>
+                    <td>28,000</td>
+                    <td>35.00</td>
+                </tr>
+                <tr>
+                    <td>47</td>
+                    <td>Innovative Constructions</td>
+                    <td>Real Estate</td>
+                    <td>Commercial</td>
+                    <td>Commercial Complex Construction</td>
+                    <td>Indiranagar, Bangalore</td>
+                    <td>8</td>
+                    <td>32,000</td>
+                    <td>40.00</td>
+                </tr>
+                <tr>
+                    <td>48</td>
+                    <td>JK Hospitals</td>
+                    <td>Healthcare</td>
+                    <td>Hospital</td>
+                    <td>New Hospital Construction</td>
+                    <td>Banashankari, Bangalore</td>
+                    <td>20</td>
+                    <td>80,000</td>
+                    <td>100.00</td>
+                </tr>
+                <tr>
+                    <td>49</td>
+                    <td>Liberty Foods</td>
+                    <td>Food & Beverages</td>
+                    <td>Manufacturing</td>
+                    <td>Food Processing Plant Construction</td>
+                    <td>Peenya, Bangalore</td>
+                    <td>12</td>
+                    <td>48,000</td>
+                    <td>60.00</td>
+                </tr>
+                <tr>
+                    <td>50</td>
+                    <td>Marvel Realtors</td>
+                    <td>Real Estate</td>
+                    <td>Commercial</td>
+                    <td>Shopping Mall Construction</td>
+                    <td>Rajajinagar, Bangalore</td>
+                    <td>25</td>
+                    <td>100,000</td>
+                    <td>150.00</td>
+                </tr>
+                <tr>
+                    <td>51</td>
+                    <td>Nest Builders</td>
+                    <td>Real Estate</td>
+                    <td>Housing</td>
+                    <td>Construction of Residential Apartments</td>
+                    <td>BTM Layout, Bangalore</td>
+                    <td>6</td>
+                    <td>24,000</td>
+                    <td>30.00</td>
+                </tr>
+                <tr>
+                    <td>52</td>
+                    <td>Opulent Hotels</td>
+                    <td>Hospitality</td>
+                    <td>Hotel</td>
+                    <td>Luxury Hotel Construction</td>
+                    <td>MG Road, Bangalore</td>
+                    <td>20</td>
+                    <td>80,000</td>
+                    <td>100.00</td>
+                </tr>
+                <tr>
+                    <td>53</td>
+                    <td>Pinnacle Industries</td>
+                    <td>Manufacturing</td>
+                    <td>Automobile</td>
+                    <td>Automobile Manufacturing Plant Construction</td>
+                    <td>Bommasandra, Bangalore</td>
+                    <td>30</td>
+                    <td>120,000</td>
+                    <td>200.00</td>
+                </tr>
+                <tr>
+                    <td>54</td>
+                    <td>Quick Solutions</td>
+                    <td>IT</td>
+                    <td>IT Services</td>
+                    <td>IT Services Center Construction</td>
+                    <td>HSR Layout, Bangalore</td>
+                    <td>12</td>
+                    <td>48,000</td>
+                    <td>60.00</td>
+                </tr>
+                <tr>
+                    <td>55</td>
+                    <td>Royal Estates</td>
+                    <td>Real Estate</td>
+                    <td>Housing</td>
+                    <td>Luxury Villas Construction</td>
+                    <td>Yelahanka, Bangalore</td>
+                    <td>15</td>
+                    <td>60,000</td>
+                    <td>75.00</td>
+                </tr>
+                <tr>
+                    <td>56</td>
+                    <td>Smart Tech</td>
+                    <td>IT</td>
+                    <td>Software Development</td>
+                    <td>New Software Development Center</td>
+                    <td>Marathahalli, Bangalore</td>
+                    <td>8</td>
+                    <td>32,000</td>
+                    <td>40.00</td>
+                </tr>
+                <tr>
+                    <td>57</td>
+                    <td>Tranquil Homes</td>
+                    <td>Real Estate</td>
+                    <td>Housing</td>
+                    <td>Residential Complex Construction</td>
+                    <td>Hebbal, Bangalore</td>
+                    <td>10</td>
+                    <td>40,000</td>
+                    <td>50.00</td>
+                </tr>
+                <tr>
+                    <td>58</td>
+                    <td>Urban Developers</td>
+                    <td>Real Estate</td>
+                    <td>Commercial</td>
+                    <td>Commercial Office Construction</td>
+                    <td>Kormangala, Bangalore</td>
+                    <td>12</td>
+                    <td>48,000</td>
+                    <td>60.00</td>
+                </tr>
+                <tr>
+                    <td>59</td>
+                    <td>Victory Constructions</td>
+                    <td>Real Estate</td>
+                    <td>Commercial</td>
+                    <td>Hotel Construction</td>
+                    <td>Hosur Road, Bangalore</td>
+                    <td>18</td>
+                    <td>72,000</td>
+                    <td>90.00</td>
+                </tr>
+                <tr>
+                    <td>60</td>
+                    <td>Wellness Hospitals</td>
+                    <td>Healthcare</td>
+                    <td>Hospital</td>
+                    <td>Specialty Hospital Construction</td>
+                    <td>J P Nagar, Bangalore</td>
+                    <td>22</td>
+                    <td>88,000</td>
+                    <td>110.00</td>
+                </tr>
+                <tr>
+                    <td>61</td>
+                    <td>Xenon Enterprises</td>
+                    <td>Manufacturing</td>
+                    <td>Electronics</td>
+                    <td>Electronics Manufacturing Plant Construction</td>
+                    <td>Jigani, Bangalore</td>
+                    <td>25</td>
+                    <td>100,000</td>
+                    <td>150.00</td>
+                </tr>
+                <tr>
+                    <td>62</td>
+                    <td>Yash Technologies</td>
+                    <td>IT</td>
+                    <td>Software Development</td>
+                    <td>Software Development Office Construction</td>
+                    <td>HBR Layout, Bangalore</td>
+                    <td>10</td>
+                    <td>40,000</td>
+                    <td>80.00</td>
+                </tr>
+                <tr>
+                    <td>63</td>
+                    <td>Zenith Builders</td>
+                    <td>Real Estate</td>
+                    <td>Housing</td>
+                    <td>Construction of Apartments</td>
+                    <td>Bannerghatta Road, Bangalore</td>
+                    <td>7</td>
+                    <td>28,000</td>
+                    <td>35.00</td>
+                </tr>
+                <tr>
+                    <td>64</td>
+                    <td>Alpha Constructions</td>
+                    <td>Real Estate</td>
+                    <td>Commercial</td>
+                    <td>Commercial Complex Construction</td>
+                    <td>Richmond Town, Bangalore</td>
+                    <td>12</td>
+                    <td>48,000</td>
+                    <td>60.00</td>
+                </tr>
+                <tr>
+                    <td>65</td>
+                    <td>Bravo Tech</td>
+                    <td>IT</td>
+                    <td>Software Development</td>
+                    <td>IT Services Office Construction</td>
+                    <td>Koramangala, Bangalore</td>
+                    <td>8</td>
+                    <td>32,000</td>
+                    <td>40.00</td>
+                </tr>
+                <tr>
+                    <td>66</td>
+                    <td>Creative Constructions</td>
+                    <td>Real Estate</td>
+                    <td>Housing</td>
+                    <td>Residential Apartments Construction</td>
+                    <td>Jayanagar, Bangalore</td>
+                    <td>6</td>
+                    <td>24,000</td>
+                    <td>30.00</td>
+                </tr>
+                <tr>
+                    <td>67</td>
+                    <td>Dynamic Builders</td>
+                    <td>Real Estate</td>
+                    <td>Commercial</td>
+                    <td>Business Park Construction</td>
+                    <td>Whitefield, Bangalore</td>
+                    <td>18</td>
+                    <td>72,000</td>
+                    <td>90.00</td>
+                </tr>
+                <tr>
+                    <td>68</td>
+                    <td>Elite Estates</td>
+                    <td>Real Estate</td>
+                    <td>Housing</td>
+                    <td>Luxury Apartments Construction</td>
+                    <td>HSR Layout, Bangalore</td>
+                    <td>15</td>
+                    <td>60,000</td>
+                    <td>75.00</td>
+                </tr>
+                <tr>
+                    <td>69</td>
+                    <td>Future Technologies</td>
+                    <td>IT</td>
+                    <td>Software Development</td>
+                    <td>Software Development Center</td>
+                    <td>Marathahalli, Bangalore</td>
+                    <td>12</td>
+                    <td>48,000</td>
+                    <td>60.00</td>
+                </tr>
+                <tr>
+                    <td>70</td>
+                    <td>Global Constructions</td>
+                    <td>Real Estate</td>
+                    <td>Commercial</td>
+                    <td>Commercial Complex Construction</td>
+                    <td>MG Road, Bangalore</td>
+                    <td>10</td>
+                    <td>40,000</td>
+                    <td>50.00</td>
+                </tr>
+                <tr>
+                    <td>71</td>
+                    <td>Harmony Homes</td>
+                    <td>Real Estate</td>
+                    <td>Housing</td>
+                    <td>Construction of Residential Villas</td>
+                    <td>Hebbal, Bangalore</td>
+                    <td>7</td>
+                    <td>28,000</td>
+                    <td>35.00</td>
+                </tr>
+                <tr>
+                    <td>72</td>
+                    <td>Insight Constructions</td>
+                    <td>Real Estate</td>
+                    <td>Housing</td>
+                    <td>Apartment Complex Construction</td>
+                    <td>BTM Layout, Bangalore</td>
+                    <td>9</td>
+                    <td>36,000</td>
+                    <td>45.00</td>
+                </tr>
+                <tr>
+                    <td>73</td>
+                    <td>Jubilant Enterprises</td>
+                    <td>Manufacturing</td>
+                    <td>Chemicals</td>
+                    <td>Chemical Plant Construction</td>
+                    <td>Peenya, Bangalore</td>
+                    <td>25</td>
+                    <td>100,000</td>
+                    <td>150.00</td>
+                </tr>
+                <tr>
+                    <td>74</td>
+                    <td>Kinetic Builders</td>
+                    <td>Real Estate</td>
+                    <td>Commercial</td>
+                    <td>Commercial Office Building Construction</td>
+                    <td>Jigani, Bangalore</td>
+                    <td>10</td>
+                    <td>40,000</td>
+                    <td>50.00</td>
+                </tr>
+                <tr>
+                    <td>75</td>
+                    <td>Liberty Homes</td>
+                    <td>Real Estate</td>
+                    <td>Housing</td>
+                    <td>Construction of Residential Apartments</td>
+                    <td>Rajajinagar, Bangalore</td>
+                    <td>8</td>
+                    <td>32,000</td>
+                    <td>40.00</td>
+                </tr>
+                <tr>
+                    <td>76</td>
+                    <td>Majestic Hotels</td>
+                    <td>Hospitality</td>
+                    <td>Hotel</td>
+                    <td>Luxury Hotel Construction</td>
+                    <td>Banashankari, Bangalore</td>
+                    <td>15</td>
+                    <td>60,000</td>
+                    <td>75.00</td>
+                </tr>
+                <tr>
+                    <td>77</td>
+                    <td>Neoteric Technologies</td>
+                    <td>IT</td>
+                    <td>Software Development</td>
+                    <td>IT Office Construction</td>
+                    <td>Electronic City, Bangalore</td>
+                    <td>18</td>
+                    <td>72,000</td>
+                    <td>90.00</td>
+                </tr>
+                <tr>
+                    <td>78</td>
+                    <td>Opus Constructions</td>
+                    <td>Real Estate</td>
+                    <td>Housing</td>
+                    <td>Residential Complex Construction</td>
+                    <td>Yelahanka, Bangalore</td>
+                    <td>10</td>
+                    <td>40,000</td>
+                    <td>50.00</td>
+                </tr>
+                <tr>
+                    <td>79</td>
+                    <td>Prestige Estates</td>
+                    <td>Real Estate</td>
+                    <td>Commercial</td>
+                    <td>Business Park Construction</td>
+                    <td>Indiranagar, Bangalore</td>
+                    <td>20</td>
+                    <td>80,000</td>
+                    <td>100.00</td>
+                </tr>
+                <tr>
+                    <td>80</td>
+                    <td>Quick Builders</td>
+                    <td>Real Estate</td>
+                    <td>Housing</td>
+                    <td>Apartment Complex Construction</td>
+                    <td>J P Nagar, Bangalore</td>
+                    <td>8</td>
+                    <td>32,000</td>
+                    <td>40.00</td>
+                </tr>
+                <tr>
+                    <td>81</td>
+                    <td>Regal Technologies</td>
+                    <td>IT</td>
+                    <td>Software Development</td>
+                    <td>IT Services Center Construction</td>
+                    <td>Kormangala, Bangalore</td>
+                    <td>10</td>
+                    <td>40,000</td>
+                    <td>50.00</td>
+                </tr>
+                <tr>
+                    <td>82</td>
+                    <td>Summit Constructions</td>
+                    <td>Real Estate</td>
+                    <td>Commercial</td>
+                    <td>Commercial Complex Construction</td>
+                    <td>Whitefield, Bangalore</td>
+                    <td>15</td>
+                    <td>60,000</td>
+                    <td>75.00</td>
+                </tr>
+                <tr>
+                    <td>83</td>
+                    <td>Trinity Developers</td>
+                    <td>Real Estate</td>
+                    <td>Housing</td>
+                    <td>Residential Complex Construction</td>
+                    <td>HSR Layout, Bangalore</td>
+                    <td>12</td>
+                    <td>48,000</td>
+                    <td>60.00</td>
+                </tr>
+                <tr>
+                    <td>84</td>
+                    <td>Universal Constructions</td>
+                    <td>Real Estate</td>
+                    <td>Commercial</td>
+                    <td>Business Park Construction</td>
+                    <td>MG Road, Bangalore</td>
+                    <td>18</td>
+                    <td>72,000</td>
+                    <td>90.00</td>
+                </tr>
+                <tr>
+                    <td>85</td>
+                    <td>Victory Estates</td>
+                    <td>Real Estate</td>
+                    <td>Housing</td>
+                    <td>Construction of Apartments</td>
+                    <td>BTM Layout, Bangalore</td>
+                    <td>6</td>
+                    <td>24,000</td>
+                    <td>30.00</td>
+                </tr>
+                <tr>
+                    <td>86</td>
+                    <td>Wellness Builders</td>
+                    <td>Healthcare</td>
+                    <td>Hospital</td>
+                    <td>New Hospital Construction</td>
+                    <td>Hebbal, Bangalore</td>
+                    <td>20</td>
+                    <td>80,000</td>
+                    <td>100.00</td>
+                </tr>
+                <tr>
+                    <td>87</td>
+                    <td>Xpress Technologies</td>
+                    <td>IT</td>
+                    <td>Software Development</td>
+                    <td>Software Development Center</td>
+                    <td>Marathahalli, Bangalore</td>
+                    <td>8</td>
+                    <td>32,000</td>
+                    <td>40.00</td>
+                </tr>
+                <tr>
+                    <td>88</td>
+                    <td>Yellowstone Builders</td>
+                    <td>Real Estate</td>
+                    <td>Commercial</td>
+                    <td>Commercial Complex Construction</td>
+                    <td>Rajajinagar, Bangalore</td>
+                    <td>10</td>
+                    <td>40,000</td>
+                    <td>50.00</td>
+                </tr>
+                <tr>
+                    <td>89</td>
+                    <td>Zest Constructions</td>
+                    <td>Real Estate</td>
+                    <td>Housing</td>
+                    <td>Residential Villas Construction</td>
+                    <td>Jayanagar, Bangalore</td>
+                    <td>7</td>
+                    <td>28,000</td>
+                    <td>35.00</td>
+                </tr>
+                <tr>
+                    <td>90</td>
+                    <td>Aspire Technologies</td>
+                    <td>IT</td>
+                    <td>Software Development</td>
+                    <td>Software Development Center</td>
+                    <td>Electronic City, Bangalore</td>
+                    <td>10</td>
+                    <td>40,000</td>
+                    <td>80.00</td>
+                </tr>
+                <tr>
+                    <td>91</td>
+                    <td>Bright Constructions</td>
+                    <td>Real Estate</td>
+                    <td>Commercial</td>
+                    <td>Commercial Office Construction</td>
+                    <td>Indiranagar, Bangalore</td>
+                    <td>12</td>
+                    <td>48,000</td>
+                    <td>60.00</td>
+                </tr>
+                <tr>
+                    <td>92</td>
+                    <td>Cosmos Builders</td>
+                    <td>Real Estate</td>
+                    <td>Housing</td>
+                    <td>Residential Apartments Construction</td>
+                    <td>Kormangala, Bangalore</td>
+                    <td>15</td>
+                    <td>60,000</td>
+                    <td>75.00</td>
+                </tr>
+                <tr>
+                    <td>93</td>
+                    <td>Dynamic Technologies</td>
+                    <td>IT</td>
+                    <td>Software Development</td>
+                    <td>IT Services Office Construction</td>
+                    <td>Whitefield, Bangalore</td>
+                    <td>12</td>
+                    <td>48,000</td>
+                    <td>60.00</td>
+                </tr>
+                <tr>
+                    <td>94</td>
+                    <td>Emerald Constructions</td>
+                    <td>Real Estate</td>
+                    <td>Commercial</td>
+                    <td>Commercial Complex Construction</td>
+                    <td>Banashankari, Bangalore</td>
+                    <td>10</td>
+                    <td>40,000</td>
+                    <td>50.00</td>
+                </tr>
+                <tr>
+                    <td>95</td>
+                    <td>Fortune Homes</td>
+                    <td>Real Estate</td>
+                    <td>Housing</td>
+                    <td>Residential Complex Construction</td>
+                    <td>HSR Layout, Bangalore</td>
+                    <td>15</td>
+                    <td>60,000</td>
+                    <td>75.00</td>
+                </tr>
+                <tr>
+                    <td>96</td>
+                    <td>Green Valley Constructions</td>
+                    <td>Real Estate</td>
+                    <td>Housing</td>
+                    <td>Apartment Complex Construction</td>
+                    <td>Marathahalli, Bangalore</td>
+                    <td>12</td>
+                    <td>48,000</td>
+                    <td>60.00</td>
+                </tr>
+                <tr>
+                    <td>97</td>
+                    <td>Harmony Constructions</td>
+                    <td>Real Estate</td>
+                    <td>Commercial</td>
+                    <td>Commercial Office Building Construction</td>
+                    <td>J P Nagar, Bangalore</td>
+                    <td>10</td>
+                    <td>40,000</td>
+                    <td>50.00</td>
+                </tr>
+                <tr>
+                    <td>98</td>
+                    <td>Imperial Estates</td>
+                    <td>Real Estate</td>
+                    <td>Commercial</td>
+                    <td>Business Park Construction</td>
+                    <td>Yelahanka, Bangalore</td>
+                    <td>20</td>
+                    <td>80,000</td>
+                    <td>100.00</td>
+                </tr>
+                <tr>
+                    <td>99</td>
+                    <td>Jubilant Constructions</td>
+                    <td>Real Estate</td>
+                    <td>Housing</td>
+                    <td>Apartment Complex Construction</td>
+                    <td>Richmond Town, Bangalore</td>
+                    <td>12</td>
+                    <td>48,000</td>
+                    <td>60.00</td>
+                </tr>
+                <tr>
+                    <td>100</td>
+                    <td>Kingfisher Technologies</td>
+                    <td>IT</td>
+                    <td>Software Development</td>
+                    <td>IT Services Center Construction</td>
+                    <td>HBR Layout, Bangalore</td>
+                    <td>10</td>
+                    <td>40,000</td>
+                    <td>50.00</td>
+                </tr>
+                <tr>
+                    <td>101</td>
+                    <td>Liberty Constructions</td>
+                    <td>Real Estate</td>
+                    <td>Commercial</td>
+                    <td>Commercial Complex Construction</td>
+                    <td>Koramangala, Bangalore</td>
+                    <td>15</td>
+                    <td>60,000</td>
+                    <td>75.00</td>
+                </tr>
+                <tr>
+                    <td>102</td>
+                    <td>Majestic Constructions</td>
+                    <td>Real Estate</td>
+                    <td>Housing</td>
+                    <td>Residential Complex Construction</td>
+                    <td>Hebbal, Bangalore</td>
+                    <td>12</td>
+                    <td>48,000</td>
+                    <td>60.00</td>
+                </tr>
+                <tr>
+                    <td>103</td>
+                    <td>Nest Technologies</td>
+                    <td>IT</td>
+                    <td>Software Development</td>
+                    <td>IT Services Office Construction</td>
+                    <td>BTM Layout, Bangalore</td>
+                    <td>10</td>
+                    <td>40,000</td>
+                    <td>50.00</td>
+                </tr>
+                <tr>
+                    <td>104</td>
+                    <td>Opal Constructions</td>
+                    <td>Real Estate</td>
+                    <td>Commercial</td>
+                    <td>Business Park Construction</td>
+                    <td>Bannerghatta Road, Bangalore</td>
+                    <td>18</td>
+                    <td>72,000</td>
+                    <td>90.00</td>
+                </tr>
+                <tr>
+                    <td>105</td>
+                    <td>Prime Constructions</td>
+                    <td>Real Estate</td>
+                    <td>Housing</td>
+                    <td>Construction of Apartments</td>
+                    <td>Peenya, Bangalore</td>
+                    <td>6</td>
+                    <td>24,000</td>
+                    <td>30.00</td>
+                </tr>
+                <tr>
+                    <td>106</td>
+                    <td>Royal Constructions</td>
+                    <td>Real Estate</td>
+                    <td>Housing</td>
+                    <td>Luxury Villas Construction</td>
+                    <td>Jigani, Bangalore</td>
+                    <td>15</td>
+                    <td>60,000</td>
+                    <td>75.00</td>
+                </tr>
+                <tr>
+                    <td>107</td>
+                    <td>Spectra Technologies</td>
+                    <td>IT</td>
+                    <td>Software Development</td>
+                    <td>Software Development Center</td>
+                    <td>Rajajinagar, Bangalore</td>
+                    <td>10</td>
+                    <td>40,000</td>
+                    <td>50.00</td>
+                </tr>
+                <tr>
+                    <td>108</td>
+                    <td>Titan Builders</td>
+                    <td>Real Estate</td>
+                    <td>Commercial</td>
+                    <td>Commercial Office Construction</td>
+                    <td>HSR Layout, Bangalore</td>
+                    <td>12</td>
+                    <td>48,000</td>
+                    <td>60.00</td>
+                </tr>
+                <tr>
+                    <td>109</td>
+                    <td>Unity Constructions</td>
+                    <td>Real Estate</td>
+                    <td>Housing</td>
+                    <td>Residential Apartments Construction</td>
+                    <td>Indiranagar, Bangalore</td>
+                    <td>8</td>
+                    <td>32,000</td>
+                    <td>40.00</td>
+                </tr>
+                <tr>
+                    <td>110</td>
+                    <td>Victory Builders</td>
+                    <td>Real Estate</td>
+                    <td>Commercial</td>
+                    <td>Business Park Construction</td>
+                    <td>Marathahalli, Bangalore</td>
+                    <td>15</td>
+                    <td>60,000</td>
+                    <td>75.00</td>
+                </tr>
+                <tr>
+                  <td>111</td>
+                  <td>Wonder Homes</td>
+                  <td>Real Estate</td>
+                  <td>Housing</td>
+                  <td>Luxury Villas Construction</td>
+                  <td>Whitefield, Bangalore</td>
+                  <td>18</td>
+                  <td>72,000</td>
+                  <td>90.00</td>
+              </tr>
+              <tr>
+                  <td>112</td>
+                  <td>Xcel Builders</td>
+                  <td>Real Estate</td>
+                  <td>Housing</td>
+                  <td>Residential Apartments Construction</td>
+                  <td>Electronic City, Bangalore</td>
+                  <td>14</td>
+                  <td>56,000</td>
+                  <td>70.00</td>
+              </tr>
+              <tr>
+                  <td>113</td>
+                  <td>Zenith Constructions</td>
+                  <td>Real Estate</td>
+                  <td>Commercial</td>
+                  <td>Commercial Office Building Construction</td>
+                  <td>BTM Layout, Bangalore</td>
+                  <td>12</td>
+                  <td>48,000</td>
+                  <td>60.00</td>
+              </tr>
+              <tr>
+                  <td>114</td>
+                  <td>Ace Builders</td>
+                  <td>Real Estate</td>
+                  <td>Housing</td>
+                  <td>Apartment Complex Construction</td>
+                  <td>HSR Layout, Bangalore</td>
+                  <td>16</td>
+                  <td>64,000</td>
+                  <td>80.00</td>
+              </tr>
+              <tr>
+                  <td>115</td>
+                  <td>Bright Homes</td>
+                  <td>Real Estate</td>
+                  <td>Housing</td>
+                  <td>Residential Villas Construction</td>
+                  <td>Marathahalli, Bangalore</td>
+                  <td>10</td>
+                  <td>40,000</td>
+                  <td>50.00</td>
+              </tr>
+              <tr>
+                  <td>116</td>
+                  <td>Cloud Builders</td>
+                  <td>Real Estate</td>
+                  <td>Commercial</td>
+                  <td>Business Park Construction</td>
+                  <td>Koramangala, Bangalore</td>
+                  <td>20</td>
+                  <td>80,000</td>
+                  <td>100.00</td>
+              </tr>
+              <tr>
+                  <td>117</td>
+                  <td>Dynamic Developers</td>
+                  <td>Real Estate</td>
+                  <td>Housing</td>
+                  <td>Luxury Villas Construction</td>
+                  <td>Jayanagar, Bangalore</td>
+                  <td>18</td>
+                  <td>72,000</td>
+                  <td>90.00</td>
+              </tr>
+              <tr>
+                  <td>118</td>
+                  <td>Elite Builders</td>
+                  <td>Real Estate</td>
+                  <td>Commercial</td>
+                  <td>Commercial Office Construction</td>
+                  <td>Indiranagar, Bangalore</td>
+                  <td>14</td>
+                  <td>56,000</td>
+                  <td>70.00</td>
+              </tr>
+              <tr>
+                  <td>119</td>
+                  <td>Fortune Builders</td>
+                  <td>Real Estate</td>
+                  <td>Housing</td>
+                  <td>Residential Apartments Construction</td>
+                  <td>Bannerghatta Road, Bangalore</td>
+                  <td>16</td>
+                  <td>64,000</td>
+                  <td>80.00</td>
+              </tr>
+              <tr>
+                  <td>120</td>
+                  <td>Green Builders</td>
+                  <td>Real Estate</td>
+                  <td>Commercial</td>
+                  <td>Business Park Construction</td>
+                  <td>J P Nagar, Bangalore</td>
+                  <td>20</td>
+                  <td>80,000</td>
+                  <td>100.00</td>
+              </tr>
+              <tr>
+                  <td>121</td>
+                  <td>Harmony Builders</td>
+                  <td>Real Estate</td>
+                  <td>Housing</td>
+                  <td>Luxury Villas Construction</td>
+                  <td>Hebbal, Bangalore</td>
+                  <td>12</td>
+                  <td>48,000</td>
+                  <td>60.00</td>
+              </tr>
+              <tr>
+                  <td>122</td>
+                  <td>Ideal Homes</td>
+                  <td>Real Estate</td>
+                  <td>Housing</td>
+                  <td>Apartment Complex Construction</td>
+                  <td>Whitefield, Bangalore</td>
+                  <td>16</td>
+                  <td>64,000</td>
+                  <td>80.00</td>
+              </tr>
+              <tr>
+                  <td>123</td>
+                  <td>Jubilant Builders</td>
+                  <td>Real Estate</td>
+                  <td>Commercial</td>
+                  <td>Commercial Office Construction</td>
+                  <td>Electronic City, Bangalore</td>
+                  <td>14</td>
+                  <td>56,000</td>
+                  <td>70.00</td>
+              </tr>
+              <tr>
+                  <td>124</td>
+                  <td>King Builders</td>
+                  <td>Real Estate</td>
+                  <td>Commercial</td>
+                  <td>Business Park Construction</td>
+                  <td>BTM Layout, Bangalore</td>
+                  <td>20</td>
+                  <td>80,000</td>
+                  <td>100.00</td>
+              </tr>
+              <tr>
+                  <td>125</td>
+                  <td>Liberty Homes</td>
+                  <td>Real Estate</td>
+                  <td>Housing</td>
+                  <td>Residential Apartments Construction</td>
+                  <td>HSR Layout, Bangalore</td>
+                  <td>16</td>
+                  <td>64,000</td>
+                  <td>80.00</td>
+              </tr>
+              <tr>
+                  <td>126</td>
+                  <td>Majestic Builders</td>
+                  <td>Real Estate</td>
+                  <td>Commercial</td>
+                  <td>Commercial Office Building Construction</td>
+                  <td>Marathahalli, Bangalore</td>
+                  <td>14</td>
+                  <td>56,000</td>
+                  <td>70.00</td>
+              </tr>
+              <tr>
+                  <td>127</td>
+                  <td>New Age Builders</td>
+                  <td>Real Estate</td>
+                  <td>Housing</td>
+                  <td>Luxury Villas Construction</td>
+                  <td>Koramangala, Bangalore</td>
+                  <td>18</td>
+                  <td>72,000</td>
+                  <td>90.00</td>
+              </tr>
+              <tr>
+                  <td>128</td>
+                  <td>Opal Builders</td>
+                  <td>Real Estate</td>
+                  <td>Commercial</td>
+                  <td>Business Park Construction</td>
+                  <td>Jayanagar, Bangalore</td>
+                  <td>20</td>
+                  <td>80,000</td>
+                  <td>100.00</td>
+              </tr>
+              <tr>
+                  <td>129</td>
+                  <td>Prime Builders</td>
+                  <td>Real Estate</td>
+                  <td>Housing</td>
+                  <td>Apartment Complex Construction</td>
+                  <td>Indiranagar, Bangalore</td>
+                  <td>16</td>
+                  <td>64,000</td>
+                  <td>80.00</td>
+              </tr>
+              <tr>
+                  <td>130</td>
+                  <td>Quality Homes</td>
+                  <td>Real Estate</td>
+                  <td>Housing</td>
+                  <td>Residential Apartments Construction</td>
+                  <td>Bannerghatta Road, Bangalore</td>
+                  <td>14</td>
+                  <td>56,000</td>
+                  <td>70.00</td>
+              </tr>
+              <tr>
+                  <td>131</td>
+                  <td>Royal Builders</td>
+                  <td>Real Estate</td>
+                  <td>Commercial</td>
+                  <td>Commercial Office Building Construction</td>
+                  <td>J P Nagar, Bangalore</td>
+                  <td>12</td>
+                  <td>48,000</td>
+                  <td>60.00</td>
+              </tr>
+              <tr>
+                  <td>132</td>
+                  <td>Super Builders</td>
+                  <td>Real Estate</td>
+                  <td>Housing</td>
+                  <td>Luxury Villas Construction</td>
+                  <td>Hebbal, Bangalore</td>
+                  <td>18</td>
+                  <td>72,000</td>
+                  <td>90.00</td>
+              </tr>
+              <tr>
+                  <td>133</td>
+                  <td>Top Builders</td>
+                  <td>Real Estate</td>
+                  <td>Commercial</td>
+                  <td>Business Park Construction</td>
+                  <td>Whitefield, Bangalore</td>
+                  <td>20</td>
+                  <td>80,000</td>
+                  <td>100.00</td>
+              </tr>
+              <tr>
+                  <td>134</td>
+                  <td>Ultra Builders</td>
+                  <td>Real Estate</td>
+                  <td>Commercial</td>
+                  <td>Commercial Office Building Construction</td>
+                  <td>Electronic City, Bangalore</td>
+                  <td>14</td>
+                  <td>56,000</td>
+                  <td>70.00</td>
+              </tr>
+              <tr>
+                  <td>135</td>
+                  <td>Vibrant Homes</td>
+                  <td>Real Estate</td>
+                  <td>Housing</td>
+                  <td>Apartment Complex Construction</td>
+                  <td>BTM Layout, Bangalore</td>
+                  <td>16</td>
+                  <td>64,000</td>
+                  <td>80.00</td>
+              </tr>
+              <tr>
+                  <td>136</td>
+                  <td>Whiz Builders</td>
+                  <td>Real Estate</td>
+                  <td>Housing</td>
+                  <td>Luxury Villas Construction</td>
+                  <td>HSR Layout, Bangalore</td>
+                  <td>18</td>
+                  <td>72,000</td>
+                  <td>90.00</td>
+              </tr>
+              <tr>
+                  <td>137</td>
+                  <td>Xpert Builders</td>
+                  <td>Real Estate</td>
+                  <td>Commercial</td>
+                  <td>Business Park Construction</td>
+                  <td>Marathahalli, Bangalore</td>
+                  <td>20</td>
+                  <td>80,000</td>
+                  <td>100.00</td>
+              </tr>
+              <tr>
+                  <td>138</td>
+                  <td>Yellow Builders</td>
+                  <td>Real Estate</td>
+                  <td>Commercial</td>
+                  <td>Commercial Office Building Construction</td>
+                  <td>Koramangala, Bangalore</td>
+                  <td>14</td>
+                  <td>56,000</td>
+                  <td>70.00</td>
+              </tr>
+              <tr>
+                  <td>139</td>
+                  <td>Zen Homes</td>
+                  <td>Real Estate</td>
+                  <td>Housing</td>
+                  <td>Residential Apartments Construction</td>
+                  <td>Jayanagar, Bangalore</td>
+                  <td>16</td>
+                  <td>64,000</td>
+                  <td>80.00</td>
+              </tr>
+              <tr>
+                  <td>140</td>
+                  <td>Alpha Builders</td>
+                  <td>Real Estate</td>
+                  <td>Commercial</td>
+                  <td>Commercial Office Construction</td>
+                  <td>Indiranagar, Bangalore</td>
+                  <td>12</td>
+                  <td>48,000</td>
+                  <td>60.00</td>
+              </tr>
+              <tr>
+                  <td>141</td>
+                  <td>Bright Builders</td>
+                  <td>Real Estate</td>
+                  <td>Housing</td>
+                  <td>Luxury Villas Construction</td>
+                  <td>Bannerghatta Road, Bangalore</td>
+                  <td>18</td>
+                  <td>72,000</td>
+                  <td>90.00</td>
+              </tr>
+              <tr>
+                  <td>142</td>
+                  <td>Clear Builders</td>
+                  <td>Real Estate</td>
+                  <td>Commercial</td>
+                  <td>Business Park Construction</td>
+                  <td>J P Nagar, Bangalore</td>
+                  <td>20</td>
+                  <td>80,000</td>
+                  <td>100.00</td>
+              </tr>
+              <tr>
+                  <td>143</td>
+                  <td>Dynamic Homes</td>
+                  <td>Real Estate</td>
+                  <td>Housing</td>
+                  <td>Residential Apartments Construction</td>
+                  <td>Hebbal, Bangalore</td>
+                  <td>16</td>
+                  <td>64,000</td>
+                  <td>80.00</td>
+              </tr>
+              <tr>
+                  <td>144</td>
+                  <td>Elite Homes</td>
+                  <td>Real Estate</td>
+                  <td>Housing</td>
+                  <td>Apartment Complex Construction</td>
+                  <td>Whitefield, Bangalore</td>
+                  <td>14</td>
+                  <td>56,000</td>
+                  <td>70.00</td>
+              </tr>
+              <tr>
+                  <td>145</td>
+                  <td>Fortune Homes</td>
+                  <td>Real Estate</td>
+                  <td>Commercial</td>
+                  <td>Commercial Office Building Construction</td>
+                  <td>Electronic City, Bangalore</td>
+                  <td>12</td>
+                  <td>48,000</td>
+                  <td>60.00</td>
+              </tr>
+              <tr>
+                  <td>146</td>
+                  <td>Green Homes</td>
+                  <td>Real Estate</td>
+                  <td>Housing</td>
+                  <td>Luxury Villas Construction</td>
+                  <td>BTM Layout, Bangalore</td>
+                  <td>18</td>
+                  <td>72,000</td>
+                  <td>90.00</td>
+              </tr>
+              <tr>
+                  <td>147</td>
+                  <td>Harmony Homes</td>
+                  <td>Real Estate</td>
+                  <td>Commercial</td>
+                  <td>Business Park Construction</td>
+                  <td>HSR Layout, Bangalore</td>
+                  <td>20</td>
+                  <td>80,000</td>
+                  <td>100.00</td>
+              </tr>
+              <tr>
+                  <td>148</td>
+                  <td>Ideal Builders</td>
+                  <td>Real Estate</td>
+                  <td>Housing</td>
+                  <td>Residential Apartments Construction</td>
+                  <td>Marathahalli, Bangalore</td>
+                  <td>16</td>
+                  <td>64,000</td>
+                  <td>80.00</td>
+              </tr>
+              <tr>
+                  <td>149</td>
+                  <td>Jubilant Homes</td>
+                  <td>Real Estate</td>
+                  <td>Commercial</td>
+                  <td>Commercial Office Construction</td>
+                  <td>Koramangala, Bangalore</td>
+                  <td>12</td>
+                  <td>48,000</td>
+                  <td>60.00</td>
+              </tr>
+              <tr>
+                  <td>150</td>
+                  <td>King Homes</td>
+                  <td>Real Estate</td>
+                  <td>Housing</td>
+                  <td>Luxury Villas Construction</td>
+                  <td>Jayanagar, Bangalore</td>
+                  <td>18</td>
+                  <td>72,000</td>
+                  <td>90.00</td>
+              </tr>
+              <tr>
+                <td colspan="7" style="text-align: right;"><strong>Total</strong></td>
+                <td><strong>3,228,597</strong></td>
+                <td><strong>9,089</strong></td>
+              </tr>
+              </table>
               </div>
-              <div class="detail-box">
-                <h5>
-                  Interior work
+        </div>
+     
+          <div id="amenity" class="filter-item" style="margin-top: 30px;">
+            <div class="box">
+                <h5 style="font-weight: 700; color:orange; font-size: 32px;">
+                  Amenity work
                 </h5>
-                <p>
-                  alteration in some form, by injected humour, or randomised words which don't look even slightly
-                  believable. If you are going to use
-                </p>
+                <table border="1" cellpadding="5" cellspacing="0">
+                  <thead>
+                      <tr>
+                          <th>Sl No</th>
+                          <th>Name of the Company</th>
+                          <th>Category</th>
+                          <th>Sub Cat</th>
+                          <th>Location</th>
+                          <th>Area in Acre</th>
+                          <th>Space in Sft</th>
+                          <th>Project Cost Rs in Crore</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>1</td>
+                          <td>Banashankari Chemicals</td>
+                          <td>Amenity</td>
+                          <td>Affordable Housing</td>
+                          <td>KIADB Industrial Area Badanaguppe</td>
+                          <td>9.6</td>
+                          <td>38,784</td>
+                          <td>120.00</td>
+                      </tr>
+                      <tr>
+                          <td>2</td>
+                          <td>Ecoshine Technologies LLP</td>
+                          <td>Amenity</td>
+                          <td>Laboratory</td>
+                          <td>KIADB Industrial Area Sompura Dabaspet</td>
+                          <td>2</td>
+                          <td>8,080</td>
+                          <td>12.00</td>
+                      </tr>
+                      <tr>
+                          <td>3</td>
+                          <td>Fortune Agritech</td>
+                          <td>Amenity</td>
+                          <td>Laboratory</td>
+                          <td>KIADB Industrial Area Gamanagatti Hubli</td>
+                          <td>1.5</td>
+                          <td>6,060</td>
+                          <td>14.00</td>
+                      </tr>
+                      <tr>
+                          <td>4</td>
+                          <td>Naksh Enterprises</td>
+                          <td>Amenity</td>
+                          <td>Petrol Pump</td>
+                          <td>KIADB Industrial Area Raichur</td>
+                          <td>0.6</td>
+                          <td>2,000</td>
+                          <td>2.20</td>
+                      </tr>
+                      <tr>
+                          <td>5</td>
+                          <td>Nayana Enterprises</td>
+                          <td>Amenity</td>
+                          <td>Weigh Bridge</td>
+                          <td>KIADB Industrial Area Manvi</td>
+                          <td>0.75</td>
+                          <td>3,000</td>
+                          <td>2.80</td>
+                      </tr>
+                      <tr>
+                          <td>6</td>
+                          <td>Patil and Patil Infrastructure</td>
+                          <td>Amenity</td>
+                          <td>Laboratory</td>
+                          <td>KIADB Industrial Area Sompura Dabaspet</td>
+                          <td>2</td>
+                          <td>8,080</td>
+                          <td>9.00</td>
+                      </tr>
+                      <tr>
+                          <td>7</td>
+                          <td>Sannathi Plant Protection</td>
+                          <td>Amenity</td>
+                          <td>Laboratory</td>
+                          <td>KIADB Industrial Area Gamanagatti Hubli</td>
+                          <td>2.2</td>
+                          <td>8,888</td>
+                          <td>12.00</td>
+                      </tr>
+                      <tr>
+                          <td>8</td>
+                          <td>Shivaganga Enterprises</td>
+                          <td>Amenity</td>
+                          <td>Petrol Pump</td>
+                          <td>KIADB Industrial Area Manvi</td>
+                          <td>2.2</td>
+                          <td>8,888</td>
+                          <td>2.80</td>
+                      </tr>
+                      <tr>
+                          <td>9</td>
+                          <td>Shree Shyam Corp</td>
+                          <td>Amenity</td>
+                          <td>Affordable Housing</td>
+                          <td>KIADB Industrial Area Bidadi</td>
+                          <td>2.6</td>
+                          <td>10,504</td>
+                          <td>28.00</td>
+                      </tr>
+                      <tr>
+                          <td>10</td>
+                          <td>Srujan Infrastructure</td>
+                          <td>Amenity</td>
+                          <td>Affordable Housing</td>
+                          <td>KIADB Industrial Area Bidadi</td>
+                          <td>4.9</td>
+                          <td>19,796</td>
+                          <td>380.00</td>
+                      </tr>
+                      <tr>
+                          <td>11</td>
+                          <td>Tanisha Enterprises</td>
+                          <td>Amenity</td>
+                          <td>Weigh Bridge</td>
+                          <td>KIADB Industrial Area Raichur</td>
+                          <td>0.5</td>
+                          <td>2,020</td>
+                          <td>2.80</td>
+                      </tr>
+                      <tr>
+                          <td>12</td>
+                          <td>Vaibhav Enterprises</td>
+                          <td>Amenity</td>
+                          <td>Laboratory</td>
+                          <td>KIADB Industrial Area Gamanagatti Hubli</td>
+                          <td>2</td>
+                          <td>8,080</td>
+                          <td>12.00</td>
+                      </tr>
+                      <tr>
+                          <td colspan="5" style="text-align: right;"><strong>Total</strong></td>
+                          <td><strong>30.85</strong></td>
+                          <td><strong>124,180</strong></td>
+                          <td><strong>597.60</strong></td>
+                      </tr>
+                  </tbody>
+              </table>
+              
               </div>
             </div>
           </div>
-          <div class="item reconstruction">
+          <div id="manufacturing" class="filter-item" style="margin-top: 30px;">
             <div class="box">
-              <div class="img-box">
-                <img src="images/project2.jpg" alt="" />
-                <a href="" class="pin_link">
-                  <i class="fa fa-link" aria-hidden="true"></i>
-                </a>
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Interior work
+                <h5 style="font-weight: 700; color:orange; font-size: 32px;">
+                  Manufacturing
                 </h5>
-                <p>
-                  alteration in some form, by injected humour, or randomised words which don't look even slightly
-                  believable. If you are going to use
-                </p>
-              </div>
+               <table>
+  <thead>
+    <tr>
+      <th>Sl No</th>
+      <th>Name of the Company</th>
+      <th>Category</th>
+      <th>Sub Cat</th>
+      <th>Project work Activities</th>
+      <th>Location</th>
+      <th>Area in Acre</th>
+      <th>Space in Sft</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Hella Inframarket Retail Private ltd</td>
+      <td>Manufacturing</td>
+      <td>AACE Block Bricks</td>
+      <td>Manufacturing of FlyAsh lightweight Bricks and Adhesives</td>
+      <td>KIADB Industrial Area Kotur Belur, Dharwad</td>
+      <td>10</td>
+      <td>40,400</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Hella Inframarket Retail Private ltd</td>
+      <td>Manufacturing</td>
+      <td>AACE Block Bricks</td>
+      <td>Manufacturing of FlyAsh lightweight Bricks and Adhesives</td>
+      <td>KIADB Industrial Area Gowribidanur, Chikballapur District</td>
+      <td>10</td>
+      <td>40,400</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Vijay constructions</td>
+      <td>Manufacturing</td>
+      <td>AACE Block Bricks</td>
+      <td>Bricks manufacturing</td>
+      <td>KIADB Industrial Area Badanaguppe</td>
+      <td>1</td>
+      <td>4,040</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Sri Laxmi industries</td>
+      <td>Manufacturing</td>
+      <td>AACE Block Bricks</td>
+      <td>Bricks manufacturing</td>
+      <td>KIADB Industrial Area Badanaguppe</td>
+      <td>6</td>
+      <td>24,240</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Mathrushree enterprises</td>
+      <td>Manufacturing</td>
+      <td>AACE Block Bricks</td>
+      <td>Bricks manufacturing</td>
+      <td>KIADB Industrial Area Badanaguppe</td>
+      <td>2</td>
+      <td>8,080</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Hyphen Products & Servises</td>
+      <td>Manufacturing</td>
+      <td>Aeronatical 3D Graphic</td>
+      <td>Manufacturing of 3D Aeronatical Graphics for Aircrafts</td>
+      <td>KIADB Industrial Area Aerospace Devanahalli</td>
+      <td>2</td>
+      <td>8,080</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Nice Bags</td>
+      <td>Manufacturing</td>
+      <td>Bags Manufacturing</td>
+      <td></td>
+      <td>KIADB Industrial Area Dabaspet Sompura</td>
+      <td>2</td>
+      <td>8,080</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Ironhill Breweries</td>
+      <td>Manufacturing</td>
+      <td>Beer Manufacturing</td>
+      <td></td>
+      <td>KIADB Industrial Area Badanaguppe</td>
+      <td>2</td>
+      <td>8,080</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Exult Motocorp Pvt Ltd</td>
+      <td>Manufacturing</td>
+      <td>E V vehicle</td>
+      <td></td>
+      <td>KIADB Industrial Area Devanahalli</td>
+      <td>2</td>
+      <td>8,080</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>M/s. Siddaraju Enterprises</td>
+      <td>Manufacturing</td>
+      <td>Electrical Panel</td>
+      <td></td>
+      <td>KIADB Industrial Area Devanahalli</td>
+      <td>2</td>
+      <td>8,080</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>Shah Eye care Pvt Ltd</td>
+      <td>Manufacturing</td>
+      <td>Eye Care product</td>
+      <td></td>
+      <td>KIADB Industrial Area Dabaspet Sompura</td>
+      <td>2.5</td>
+      <td>10,100</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>Shah eye care</td>
+      <td>Manufacturing</td>
+      <td>Eye lense manufacturing</td>
+      <td>Eye lense manufacturing</td>
+      <td>KIADB Industrial Area Aerospace defence park Devanahalli</td>
+      <td>2</td>
+      <td>8,080</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>Ayan Ispat</td>
+      <td>Manufacturing</td>
+      <td>Fabrication</td>
+      <td>Fabrication</td>
+      <td>KIADB – Industrial Area Gowribidnur 2nd phase</td>
+      <td>2</td>
+      <td>8,080</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>Future Fab Tech</td>
+      <td>Manufacturing</td>
+      <td>Fabrication</td>
+      <td></td>
+      <td>KIADB Industrial Area Devanahalli</td>
+      <td>2</td>
+      <td>8,080</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>Infra Fab Tech</td>
+      <td>Manufacturing</td>
+      <td>Fabrication</td>
+      <td></td>
+      <td>KIADB Industrial Area Devanahalli</td>
+      <td>2</td>
+      <td>8,080</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>Sri Infrastructure</td>
+      <td>Manufacturing</td>
+      <td>Fabrication</td>
+      <td></td>
+      <td>KIADB Industrial Area Dabaspet Sompura</td>
+      <td>2</td>
+      <td>8,080</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>Uday Infrastructuire</td>
+      <td>Manufacturing</td>
+      <td>Fabrication</td>
+      <td></td>
+      <td>KIADB Industrial Area Devanahalli</td>
+      <td>2</td>
+      <td>8,080</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>Venkatalakshmi Industries</td>
+      <td>Manufacturing</td>
+      <td>Fabrication</td>
+      <td></td>
+      <td>KIADB Industrial Area Devanahalli</td>
+      <td>2</td>
+      <td>8,080</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>Growin Lifesciences</td>
+      <td>Manufacturing</td>
+      <td>Fertilizers Manufacturing</td>
+      <td>Manufacturing of Granulated Fertilizers, & Manufacturing and Extraction of Curcumin</td>
+      <td>KIADB Industrial Area Badanaguppe</td>
+      <td>3</td>
+      <td>12,120</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>Southindian Phosphates and Minerars Pvt Ltd</td>
+      <td>Manufacturing</td>
+      <td>Fertilizers Manufacturing</td>
+      <td></td>
+      <td>KIADB Industrial Area Hassan</td>
+      <td>10</td>
+      <td>40,400</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>Akshaya Trading Co</td>
+      <td>Manufacturing</td>
+      <td>Fertilizers Manufacturing</td>
+      <td></td>
+      <td>KIADB Industrial Area Dabaspet Sompura</td>
+      <td>2</td>
+      <td>8,080</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>Crop Care Agriclinics</td>
+      <td>Manufacturing</td>
+      <td>Fertilizers Manufacturing</td>
+      <td></td>
+      <td>KIADB Industrial Area Dabaspet Sompura</td>
+      <td>2</td>
+      <td>8,080</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td>Aeronatical 3D Graphic</td>
+      <td>Manufacturing</td>
+      <td>Graphics</td>
+      <td>Manufacturing of 3D Aeronatical Graphics for Aircrafts</td>
+      <td>KIADB Industrial Area Aerospace Devanahalli</td>
+      <td>2</td>
+      <td>8,080</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>Varun Solar Inovatives</td>
+      <td>Manufacturing</td>
+      <td>Manufacturing</td>
+      <td>Manufacturing of Solar Dryers</td>
+      <td>KIADB Industrial Area Dabaspet Sompura</td>
+      <td>2</td>
+      <td>8,080</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>Oorja Cell Technologies</td>
+      <td>Manufacturing</td>
+      <td>Manufacturing</td>
+      <td>Battery Manufacturing</td>
+      <td>KIADB Industrial Area Aerospace Defence Park Devanahalli</td>
+      <td>4</td>
+      <td>16,160</td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td>OM Shakti Inudstries</td>
+      <td>Manufacturing</td>
+      <td>MS Sheet and Coil</td>
+      <td>Manufacturing of MS Sheets and Coils</td>
+      <td>KIADB Industrial Area Dabaspet Sompura</td>
+      <td>2</td>
+      <td>8,080</td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td>Vasundara Polymers</td>
+      <td>Manufacturing</td>
+      <td>Polymers</td>
+      <td>Manufacturing of Injection Molded Plastics, Medical Devices etc</td>
+      <td>KIADB Industrial Area Dabaspet Sompura</td>
+      <td>2</td>
+      <td>8,080</td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td>Kirloskar Electric Co Ltd</td>
+      <td>Manufacturing</td>
+      <td>Electrical Motor</td>
+      <td>Manufacturing of Eletric Motors</td>
+      <td>KIADB Industrial Area Gauribidanur 2nd Phase</td>
+      <td>25</td>
+      <td>1,01,000</td>
+    </tr>
+    <tr>
+      <td>29</td>
+      <td>Mathrushree Polymers</td>
+      <td>Manufacturing</td>
+      <td>Plastic</td>
+      <td></td>
+      <td>KIADB Industrial Area Dabaspet Sompura</td>
+      <td>2</td>
+      <td>8,080</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td>Siriraedu Industries</td>
+      <td>Manufacturing</td>
+      <td>Plastic</td>
+      <td>Manufacturing of all types of plastics and its Granules</td>
+      <td>KIADB Industrial Area Dabaspet Sompura</td>
+      <td>2</td>
+      <td>8,080</td>
+    </tr>
+    <tr>
+      <td>31</td>
+      <td>Alura Metal</td>
+      <td>Manufacturing</td>
+      <td>Recycling</td>
+      <td>Recycling of Aluminium, Plastic, Brass, Copper and Steel and other non-ferrous metals</td>
+      <td>KIADB Industrial Area Aerospace Defence Park Devanahalli</td>
+      <td>2</td>
+      <td>8,080</td>
+    </tr>
+    <tr>
+      <td>32</td>
+      <td>MaxWell Green Energy Pvt Ltd</td>
+      <td>Manufacturing</td>
+      <td>Renewable Energy</td>
+      <td>Manufacturing and Assembling of Windmill Generators</td>
+      <td>KIADB Industrial Area Gauribidanur 2nd Phase</td>
+      <td>2</td>
+      <td>8,080</td>
+    </tr>
+    <tr>
+      <td>33</td>
+      <td>Saw Mile Factory</td>
+      <td>Manufacturing</td>
+      <td>Saw Mill</td>
+      <td></td>
+      <td>KIADB Industrial Area Nandagudi 2nd Phase</td>
+      <td>5</td>
+      <td>20,200</td>
+    </tr>
+    <tr>
+      <td>34</td>
+      <td>Kasturi Metal composites</td>
+      <td>Manufacturing</td>
+      <td>Sheet metal parts</td>
+      <td>Manufacturing of all types of Sheet metal parts</td>
+      <td>KIADB Industrial Area Dabaspet Sompura</td>
+      <td>2</td>
+      <td>8,080</td>
+    </tr>
+    <tr>
+      <td>35</td>
+      <td>Sujay Bio-Tech</td>
+      <td>Manufacturing</td>
+      <td>Spirulina</td>
+      <td>Manufacturing of Spilurina</td>
+      <td>KIADB Industrial Area Hassan</td>
+      <td>2</td>
+      <td>8,080</td>
+    </tr>
+    <tr>
+      <td>36</td>
+      <td>Vignan Biotech</td>
+      <td>Manufacturing</td>
+      <td>Spirulina</td>
+      <td>Manufacturing of Spilurina</td>
+      <td>KIADB Industrial Area Dabaspet Sompura</td>
+      <td>2</td>
+      <td>8,080</td>
+    </tr>
+    <tr>
+      <td>37</td>
+      <td>Bellary Oxygen Company</td>
+      <td>Manufacturing</td>
+      <td>Oxygen Manufacturing</td>
+      <td></td>
+      <td>KIADB Industrial Area Aerospace Defence Park Devanahalli</td>
+      <td>2</td>
+      <td>8,080</td>
+    </tr>
+    <tr>
+      <td>38</td>
+      <td>Bellary Oxygen Company</td>
+      <td>Manufacturing</td>
+      <td>Oxygen Manufacturing</td>
+      <td></td>
+      <td>KIADB Industrial Area Hassan</td>
+      <td>2</td>
+      <td>8,080</td>
+    </tr>
+    <tr>
+      <td>39</td>
+      <td>Karnataka Machine Tools</td>
+      <td>Manufacturing</td>
+      <td>Machine Manufacturing</td>
+      <td>Manufacturing of Machinery and Machine Components</td>
+      <td>KIADB Industrial Area Nandagudi 2nd Phase</td>
+      <td>5</td>
+      <td>20,200</td>
+    </tr>
+    <tr>
+      <td>40</td>
+      <td>SRI LAXMI INDUSTRES</td>
+      <td>Manufacturing</td>
+      <td>Steel Furniture</td>
+      <td>Manufacturing of Steel Furniture</td>
+      <td>KIADB Industrial Area Dabaspet Sompura</td>
+      <td>3</td>
+      <td>12,120</td>
+    </tr>
+    <tr>
+      <td>41</td>
+      <td>Vijay Constructions</td>
+      <td>Manufacturing</td>
+      <td>Tile Manufacturing</td>
+      <td>Manufacturing of Ceramic Tiles</td>
+      <td>KIADB Industrial Area Hassan</td>
+      <td>2</td>
+      <td>8,080</td>
+    </tr>
+    <tr>
+      <td>42</td>
+      <td>Uday Cement Products</td>
+      <td>Manufacturing</td>
+      <td>Tile Manufacturing</td>
+      <td>Manufacturing of Ceramic Tiles</td>
+      <td>KIADB Industrial Area Aerospace Park Devanahalli</td>
+      <td>3</td>
+      <td>12,120</td>
+    </tr>
+    <tr>
+      <td>43</td>
+      <td>Tecknotrove</td>
+      <td>Manufacturing</td>
+      <td>Technology</td>
+      <td>Manufacturing of Driving Simulators</td>
+      <td>KIADB Industrial Area Aerospace Park Devanahalli</td>
+      <td>3</td>
+      <td>12,120</td>
+    </tr>
+    <tr>
+      <td>44</td>
+      <td>AK Containers</td>
+      <td>Manufacturing</td>
+      <td>Textiles</td>
+      <td>Manufacturing of Textile Containers</td>
+      <td>KIADB Industrial Area Aerospace Park Devanahalli</td>
+      <td>2</td>
+      <td>8,080</td>
+    </tr>
+    <tr>
+      <td>45</td>
+      <td>Elite Electronics</td>
+      <td>Manufacturing</td>
+      <td>Electronics</td>
+      <td>Manufacturing of Consumer Electronics</td>
+      <td>KIADB Industrial Area Phase 1</td>
+      <td>5</td>
+      <td>20,200</td>
+    </tr>
+    <tr>
+      <td>46</td>
+      <td>Bright Solar Solutions</td>
+      <td>Manufacturing</td>
+      <td>Solar Energy</td>
+      <td>Manufacturing of Solar Panels</td>
+      <td>KIADB Industrial Area Phase 2</td>
+      <td>8</td>
+      <td>32,320</td>
+    </tr>
+    <tr>
+      <td>47</td>
+      <td>Green Earth Bio-Tech</td>
+      <td>Manufacturing</td>
+      <td>Bio-Tech</td>
+      <td>Manufacturing of Biodegradable Products</td>
+      <td>KIADB Industrial Area Phase 3</td>
+      <td>4</td>
+      <td>16,160</td>
+    </tr>
+    <tr>
+      <td>48</td>
+      <td>Swift Automotive</td>
+      <td>Manufacturing</td>
+      <td>Automobiles</td>
+      <td>Manufacturing of Electric Vehicles</td>
+      <td>KIADB Industrial Area Phase 4</td>
+      <td>10</td>
+      <td>40,400</td>
+    </tr>
+    <tr>
+      <td>49</td>
+      <td>Prime Steel Industries</td>
+      <td>Manufacturing</td>
+      <td>Steel</td>
+      <td>Manufacturing of Steel Products</td>
+      <td>KIADB Industrial Area Phase 5</td>
+      <td>12</td>
+      <td>48,480</td>
+    </tr>
+    <tr>
+      <td>50</td>
+      <td>Galaxy Textiles</td>
+      <td>Manufacturing</td>
+      <td>Textiles</td>
+      <td>Manufacturing of Textiles and Fabrics</td>
+      <td>KIADB Industrial Area Phase 6</td>
+      <td>7</td>
+      <td>28,280</td>
+    </tr>
+    <tr>
+      <td>51</td>
+      <td>Innovative Plastics</td>
+      <td>Manufacturing</td>
+      <td>Plastics</td>
+      <td>Manufacturing of Plastic Products</td>
+      <td>KIADB Industrial Area Phase 7</td>
+      <td>5</td>
+      <td>20,200</td>
+    </tr>
+    <tr>
+      <td>52</td>
+      <td>Vivid Chemicals</td>
+      <td>Manufacturing</td>
+      <td>Chemicals</td>
+      <td>Manufacturing of Industrial Chemicals</td>
+      <td>KIADB Industrial Area Phase 8</td>
+      <td>9</td>
+      <td>36,360</td>
+    </tr>
+    <tr>
+      <td>53</td>
+      <td>Regal Ceramics</td>
+      <td>Manufacturing</td>
+      <td>Ceramics</td>
+      <td>Manufacturing of Ceramic Tiles</td>
+      <td>KIADB Industrial Area Phase 9</td>
+      <td>6</td>
+      <td>24,240</td>
+    </tr>
+    <tr>
+      <td>54</td>
+      <td>AquaPure Solutions</td>
+      <td>Manufacturing</td>
+      <td>Water Treatment</td>
+      <td>Manufacturing of Water Purification Systems</td>
+      <td>KIADB Industrial Area Phase 10</td>
+      <td>8</td>
+      <td>32,320</td>
+    </tr>
+    <tr>
+      <td>55</td>
+      <td>Bright Batteries</td>
+      <td>Manufacturing</td>
+      <td>Electronics</td>
+      <td>Manufacturing of Rechargeable Batteries</td>
+      <td>KIADB Industrial Area Phase 11</td>
+      <td>4</td>
+      <td>16,160</td>
+    </tr>
+    <tr>
+      <td>56</td>
+      <td>Eco Friendly Packaging</td>
+      <td>Manufacturing</td>
+      <td>Packaging</td>
+      <td>Manufacturing of Eco-friendly Packaging Materials</td>
+      <td>KIADB Industrial Area Phase 12</td>
+      <td>5</td>
+      <td>20,200</td>
+    </tr>
+    <tr>
+      <td>57</td>
+      <td>Modern Machinery</td>
+      <td>Manufacturing</td>
+      <td>Machinery</td>
+      <td>Manufacturing of Industrial Machinery</td>
+      <td>KIADB Industrial Area Phase 13</td>
+      <td>7</td>
+      <td>28,280</td>
+    </tr>
+    <tr>
+      <td>58</td>
+      <td>Global Footwear</td>
+      <td>Manufacturing</td>
+      <td>Footwear</td>
+      <td>Manufacturing of Shoes and Sandals</td>
+      <td>KIADB Industrial Area Phase 14</td>
+      <td>6</td>
+      <td>24,240</td>
+    </tr>
+    <tr>
+      <td>59</td>
+      <td>Alpha Aero</td>
+      <td>Manufacturing</td>
+      <td>Aerospace</td>
+      <td>Manufacturing of Aircraft Components</td>
+      <td>KIADB Industrial Area Phase 15</td>
+      <td>12</td>
+      <td>48,480</td>
+    </tr>
+    <tr>
+      <td>60</td>
+      <td>Zenith Robotics</td>
+      <td>Manufacturing</td>
+      <td>Robotics</td>
+      <td>Manufacturing of Industrial Robots</td>
+      <td>KIADB Industrial Area Phase 16</td>
+      <td>8</td>
+      <td>32,320</td>
+    </tr>
+    <tr>
+      <td>61</td>
+      <td>Radiant Lighting</td>
+      <td>Manufacturing</td>
+      <td>Lighting</td>
+      <td>Manufacturing of LED Lights</td>
+      <td>KIADB Industrial Area Phase 17</td>
+      <td>5</td>
+      <td>20,200</td>
+    </tr>
+    <tr>
+      <td>62</td>
+      <td>Precision Tools</td>
+      <td>Manufacturing</td>
+      <td>Tools</td>
+      <td>Manufacturing of Precision Tools</td>
+      <td>KIADB Industrial Area Phase 18</td>
+      <td>4</td>
+      <td>16,160</td>
+    </tr>
+    <tr>
+      <td>63</td>
+      <td>Elite Automotive</td>
+      <td>Manufacturing</td>
+      <td>Automobiles</td>
+      <td>Manufacturing of Luxury Vehicles</td>
+      <td>KIADB Industrial Area Phase 19</td>
+      <td>10</td>
+      <td>40,400</td>
+    </tr>
+    <tr>
+      <td>64</td>
+      <td>Quantum Computers</td>
+      <td>Manufacturing</td>
+      <td>Computers</td>
+      <td>Manufacturing of Quantum Computing Devices</td>
+      <td>KIADB Industrial Area Phase 20</td>
+      <td>8</td>
+      <td>32,320</td>
+    </tr>
+    <tr>
+      <td>65</td>
+      <td>Swift Logistics</td>
+      <td>Manufacturing</td>
+      <td>Logistics</td>
+      <td>Manufacturing of Logistics and Transportation Equipment</td>
+      <td>KIADB Industrial Area Phase 21</td>
+      <td>12</td>
+      <td>48,480</td>
+    </tr>
+    <tr>
+      <td>66</td>
+      <td>Regal Textiles</td>
+      <td>Manufacturing</td>
+      <td>Textiles</td>
+      <td>Manufacturing of Premium Textiles</td>
+      <td>KIADB Industrial Area Phase 22</td>
+      <td>7</td>
+      <td>28,280</td>
+    </tr>
+    <tr>
+      <td>67</td>
+      <td>BlueWave Electronics</td>
+      <td>Manufacturing</td>
+      <td>Electronics</td>
+      <td>Manufacturing of Electronic Gadgets</td>
+      <td>KIADB Industrial Area Phase 23</td>
+      <td>5</td>
+      <td>20,200</td>
+    </tr>
+    <tr>
+      <td>68</td>
+      <td>EcoEarth Products</td>
+      <td>Manufacturing</td>
+      <td>Bio-Tech</td>
+      <td>Manufacturing of Eco-friendly Biotech Products</td>
+      <td>KIADB Industrial Area Phase 24</td>
+      <td>4</td>
+      <td>16,160</td>
+    </tr>
+    <tr>
+      <td>69</td>
+      <td>Alpha Textiles</td>
+      <td>Manufacturing</td>
+      <td>Textiles</td>
+      <td>Manufacturing of Cotton Textiles</td>
+      <td>KIADB Industrial Area Phase 25</td>
+      <td>6</td>
+      <td>24,240</td>
+    </tr>
+    <tr>
+      <td>70</td>
+      <td>Bright Innovations</td>
+      <td>Manufacturing</td>
+      <td>Technology</td>
+      <td>Manufacturing of Innovative Tech Products</td>
+      <td>KIADB Industrial Area Phase 26</td>
+      <td>8</td>
+      <td>32,320</td>
+    </tr>
+    <tr>
+      <td>71</td>
+      <td>Green Tech</td>
+      <td>Manufacturing</td>
+      <td>Technology</td>
+      <td>Manufacturing of Green Technology Solutions</td>
+      <td>KIADB Industrial Area Phase 27</td>
+      <td>5</td>
+      <td>20,200</td>
+    </tr>
+    <tr>
+      <td>72</td>
+      <td>Swift Textiles</td>
+      <td>Manufacturing</td>
+      <td>Textiles</td>
+      <td>Manufacturing of Synthetic Textiles</td>
+      <td>KIADB Industrial Area Phase 28</td>
+      <td>7</td>
+      <td>28,280</td>
+    </tr>
+    <tr>
+      <td>73</td>
+      <td>Modern Bio-Tech</td>
+      <td>Manufacturing</td>
+      <td>Bio-Tech</td>
+      <td>Manufacturing of Bio-Tech Equipment</td>
+      <td>KIADB Industrial Area Phase 29</td>
+      <td>6</td>
+      <td>24,240</td>
+    </tr>
+    <tr>
+      <td>74</td>
+      <td>Prime Packaging</td>
+      <td>Manufacturing</td>
+      <td>Packaging</td>
+      <td>Manufacturing of Industrial Packaging Materials</td>
+      <td>KIADB Industrial Area Phase 30</td>
+      <td>8</td>
+      <td>32,320</td>
+    </tr>
+    <tr>
+      <td>75</td>
+      <td>Eco-Friendly Solutions</td>
+      <td>Manufacturing</td>
+      <td>Bio-Tech</td>
+      <td>Manufacturing of Eco-Friendly Bio-Tech Solutions</td>
+      <td>KIADB Industrial Area Phase 31</td>
+      <td>4</td>
+      <td>16,160</td>
+    </tr>
+    <tr>
+      <td>76</td>
+      <td>Modern Textiles</td>
+      <td>Manufacturing</td>
+      <td>Textiles</td>
+      <td>Manufacturing of Modern Textiles</td>
+      <td>KIADB Industrial Area Phase 32</td>
+      <td>7</td>
+      <td>28,280</td>
+    </tr>
+    <tr>
+      <td>77</td>
+      <td>Swift Electronics</td>
+      <td>Manufacturing</td>
+      <td>Electronics</td>
+      <td>Manufacturing of Electronic Appliances</td>
+      <td>KIADB Industrial Area Phase 33</td>
+      <td>5</td>
+      <td>20,200</td>
+    </tr>
+    <tr>
+      <td>78</td>
+      <td>Eco Tech</td>
+      <td>Manufacturing</td>
+      <td>Technology</td>
+      <td>Manufacturing of Eco-Friendly Tech Products</td>
+      <td>KIADB Industrial Area Phase 34</td>
+      <td>6</td>
+      <td>24,240</td>
+    </tr>
+    <tr>
+      <td>79</td>
+      <td>Bright Ceramics</td>
+      <td>Manufacturing</td>
+      <td>Ceramics</td>
+      <td>Manufacturing of Ceramic Products</td>
+      <td>KIADB Industrial Area Phase 35</td>
+      <td>8</td>
+      <td>32,320</td>
+    </tr>
+    <tr>
+      <td>80</td>
+      <td>Innovative Robotics</td>
+      <td>Manufacturing</td>
+      <td>Robotics</td>
+      <td>Manufacturing of Advanced Robots</td>
+      <td>KIADB Industrial Area Phase 36</td>
+      <td>4</td>
+      <td>16,160</td>
+    </tr>
+    <tr>
+      <td>81</td>
+      <td>Alpha Solar</td>
+      <td>Manufacturing</td>
+      <td>Solar Energy</td>
+      <td>Manufacturing of Solar Power Systems</td>
+      <td>KIADB Industrial Area Phase 37</td>
+      <td>10</td>
+      <td>40,400</td>
+    </tr>
+    <tr>
+      <td>82</td>
+      <td>Global Textiles</td>
+      <td>Manufacturing</td>
+      <td>Textiles</td>
+      <td>Manufacturing of Global Textiles</td>
+      <td>KIADB Industrial Area Phase 38</td>
+      <td>7</td>
+      <td>28,280</td>
+    </tr>
+    <tr>
+      <td>83</td>
+      <td>Precision Instruments</td>
+      <td>Manufacturing</td>
+      <td>Instruments</td>
+      <td>Manufacturing of Precision Instruments</td>
+      <td>KIADB Industrial Area Phase 39</td>
+      <td>5</td>
+      <td>20,200</td>
+    </tr>
+    <tr>
+      <td>84</td>
+      <td>Bright Technologies</td>
+      <td>Manufacturing</td>
+      <td>Technology</td>
+      <td>Manufacturing of Innovative Tech Solutions</td>
+      <td>KIADB Industrial Area Phase 40</td>
+      <td>8</td>
+      <td>32,320</td>
+    </tr>
+    <tr>
+      <td>85</td>
+      <td>Green Innovations</td>
+      <td>Manufacturing</td>
+      <td>Technology</td>
+      <td>Manufacturing of Green Tech Solutions</td>
+      <td>KIADB Industrial Area Phase 41</td>
+      <td>6</td>
+      <td>24,240</td>
+    </tr>
+    <tr>
+      <td>86</td>
+      <td>Prime Bio-Tech</td>
+      <td>Manufacturing</td>
+      <td>Bio-Tech</td>
+      <td>Manufacturing of Prime Bio-Tech Products</td>
+      <td>KIADB Industrial Area Phase 42</td>
+      <td>4</td>
+      <td>16,160</td>
+    </tr>
+    <tr>
+      <td>87</td>
+      <td>Swift Solutions</td>
+      <td>Manufacturing</td>
+      <td>Technology</td>
+      <td>Manufacturing of Swift Tech Solutions</td>
+      <td>KIADB Industrial Area Phase 43</td>
+      <td>7</td>
+      <td>28,280</td>
+    </tr>
+    <tr>
+      <td>88</td>
+      <td>Eco Innovations</td>
+      <td>Manufacturing</td>
+      <td>Technology</td>
+      <td>Manufacturing of Eco-Friendly Innovations</td>
+      <td>KIADB Industrial Area Phase 44</td>
+      <td>6</td>
+      <td>24,240</td>
+    </tr>
+    <tr>
+      <td>89</td>
+      <td>Bright Electronics</td>
+      <td>Manufacturing</td>
+      <td>Electronics</td>
+      <td>Manufacturing of Bright Electronic Devices</td>
+      <td>KIADB Industrial Area Phase 45</td>
+      <td>8</td>
+      <td>32,320</td>
+    </tr>
+    <tr>
+      <td>90</td>
+      <td>Modern Robotics</td>
+      <td>Manufacturing</td>
+      <td>Robotics</td>
+      <td>Manufacturing of Modern Robots</td>
+      <td>KIADB Industrial Area Phase 46</td>
+      <td>5</td>
+      <td>20,200</td>
+    </tr>
+    <tr>
+      <td>91</td>
+      <td>Alpha Instruments</td>
+      <td>Manufacturing</td>
+      <td>Instruments</td>
+      <td>Manufacturing of Alpha Instruments</td>
+      <td>KIADB Industrial Area Phase 47</td>
+      <td>4</td>
+      <td>16,160</td>
+    </tr>
+    <tr>
+      <td>92</td>
+      <td>Green Ceramics</td>
+      <td>Manufacturing</td>
+      <td>Ceramics</td>
+      <td>Manufacturing of Eco-Friendly Ceramic Products</td>
+      <td>KIADB Industrial Area Phase 48</td>
+      <td>6</td>
+      <td>24,240</td>
+    </tr>
+  </tbody>
+                </table>
+              
             </div>
           </div>
-          <div class="item repair">
+          <div id="infrastructure" class="filter-item" style="margin-top: 30px;">
             <div class="box">
-              <div class="img-box">
-                <img src="images/project1.jpg" alt="" />
-                <a href="" class="pin_link">
-                  <i class="fa fa-link" aria-hidden="true"></i>
-                </a>
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Interior work
+                <h5 style="font-weight: 700; color:orange; font-size: 32px;">
+                  Infrastructure
                 </h5>
-                <p>
-                  alteration in some form, by injected humour, or randomised words which don't look even slightly
-                  believable. If you are going to use
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="item residential">
-            <div class="box">
-              <div class="img-box">
-                <img src="images/project1.jpg" alt="" />
-                <a href="" class="pin_link">
-                  <i class="fa fa-link" aria-hidden="true"></i>
-                </a>
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Interior work
-                </h5>
-                <p>
-                  alteration in some form, by injected humour, or randomised words which don't look even slightly
-                  believable. If you are going to use
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="item styling">
-            <div class="box">
-              <div class="img-box">
-                <img src="images/project1.jpg" alt="" />
-                <a href="" class="pin_link">
-                  <i class="fa fa-link" aria-hidden="true"></i>
-                </a>
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Interior work
-                </h5>
-                <p>
-                  alteration in some form, by injected humour, or randomised words which don't look even slightly
-                  believable. If you are going to use
-                </p>
+               <table>
+  <thead>
+    <tr>
+      <th>Sl No</th>
+      <th>Name of the Company</th>
+      <th>Category</th>
+      <th>Sub Cat</th>
+      <th>Location</th>
+      <th>Area in Acre</th>
+      <th>Space in Sft</th>
+      <th>Project Cost Rs in Crore</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Billore Hotels and Resorts</td>
+      <td>Infrastructure</td>
+      <td>Hotels & Resorts</td>
+      <td>KIADB Industrial Area Devanahalli - SUC</td>
+      <td>15.2</td>
+      <td>61,408</td>
+      <td>71.00</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Sai International – Whitefield</td>
+      <td>Infrastructure</td>
+      <td>Infrastructure - Tech Park</td>
+      <td>KIADB – ITPL Whitefield</td>
+      <td>0.75</td>
+      <td>3,030</td>
+      <td>28.16</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>AR Tech Park</td>
+      <td>Infrastructure</td>
+      <td>Infrastructure - Tech Park</td>
+      <td>KIADB – Industrial Area Devanahalli</td>
+      <td>5</td>
+      <td>20,200</td>
+      <td>190.12</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Nandi Constructive</td>
+      <td>Infrastructure</td>
+      <td>Infrastructure - Tech Park</td>
+      <td>KIADB Industrial Area Whitefield</td>
+      <td>2.35</td>
+      <td>9,494</td>
+      <td>28.32</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Nithin Sai India Infra Pvt Limited</td>
+      <td>Infrastructure</td>
+      <td>Infrastructure - Tech Park</td>
+      <td>KIADB Industrial Area Aerospace Park Devanahalli</td>
+      <td>10</td>
+      <td>40,400</td>
+      <td>480.23</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>B V M Consultants</td>
+      <td>Infrastructure</td>
+      <td>Infrastructure - Tech Park</td>
+      <td>KIADB Industrial Area Devanahalli</td>
+      <td>2</td>
+      <td>8,080</td>
+      <td>16.80</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>PRK Studios</td>
+      <td>Infrastructure</td>
+      <td>IT Park/Studio</td>
+      <td>KIADB Industrial Area Devanahalli</td>
+      <td>5</td>
+      <td>20,200</td>
+      <td>27.00</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Soul Space</td>
+      <td>Infrastructure</td>
+      <td>Real Estate Feasibility</td>
+      <td>Located on Mullur Village Sarjapura Road</td>
+      <td>8</td>
+      <td>32,320</td>
+      <td>268.00</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Soul Space</td>
+      <td>Infrastructure</td>
+      <td>Real Estate Feasibility</td>
+      <td>Manyata Tech Park</td>
+      <td>81</td>
+      <td>327,240</td>
+      <td>766.00</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Soul Space</td>
+      <td>Infrastructure</td>
+      <td>Real Estate Feasibility</td>
+      <td>Doddanekkundi Outer Ring Road, Bangalore</td>
+      <td>31.5</td>
+      <td>127,260</td>
+      <td>41.62</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>Centurion Logistics Solutions</td>
+      <td>Infrastructure</td>
+      <td>Warehouse & Cold Storages</td>
+      <td>KIADB Industrial Area Mastenahalli</td>
+      <td>2</td>
+      <td>8,080</td>
+      <td>15.86</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>Centurion Warehousing Solutions</td>
+      <td>Infrastructure</td>
+      <td>Warehouse & Cold Storages</td>
+      <td>KIADB Industrial Area Mastenahalli</td>
+      <td>2</td>
+      <td>8,080</td>
+      <td>15.86</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>Centurion Supplychain Solutions</td>
+      <td>Infrastructure</td>
+      <td>Warehouse & Cold Storages</td>
+      <td>KIADB Industrial Area Mastenahalli</td>
+      <td>2</td>
+      <td>8,080</td>
+      <td>15.86</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>Thanuja Infrastructure</td>
+      <td>Infrastructure</td>
+      <td>Warehouse & Cold Storages</td>
+      <td>KIADB Industrial Area Aerospace Devanahalli</td>
+      <td>2</td>
+      <td>8,080</td>
+      <td>15.12</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>Sandeep Logistics Solutions</td>
+      <td>Infrastructure</td>
+      <td>Warehouse & Cold Storages</td>
+      <td>KIADB Industrial Area Aerospace Devanahalli</td>
+      <td>2</td>
+      <td>8,080</td>
+      <td>15.12</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>Kalabhyraveshwara Infrastructure</td>
+      <td>Infrastructure</td>
+      <td>Warehouse & Cold Storages</td>
+      <td>KIADB Industrial Area Mastenahalli</td>
+      <td>2</td>
+      <td>8,080</td>
+      <td>15.28</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>Sagar Enterprises</td>
+      <td>Infrastructure</td>
+      <td>Warehouse & Cold Storages</td>
+      <td>KIADB Industrial Area Mastenahalli</td>
+      <td>2</td>
+      <td>8,080</td>
+      <td>15.90</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>AR Infrastructure</td>
+      <td>Infrastructure</td>
+      <td>Warehouse & Cold Storages</td>
+      <td>KIADB Industrial Area Mastenahalli</td>
+      <td>2</td>
+      <td>8,080</td>
+      <td>15.86</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>DNB Enterprises</td>
+      <td>Infrastructure</td>
+      <td>Warehouse & Cold Storages</td>
+      <td>KIADB Industrial Area Mastenahalli</td>
+      <td>2</td>
+      <td>8,080</td>
+      <td>17.77</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>Surya Cold Storages</td>
+      <td>Infrastructure</td>
+      <td>Warehouse & Cold Storages</td>
+      <td>KIADB Industrial Area Mastenahalli</td>
+      <td>6.12</td>
+      <td>24,725</td>
+      <td>60.00</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>Harish V N</td><td>Infrastructure</td>
+      <td>Warehouse & Cold Storages</td>
+      <td>KIADB Industrial Area Mastenahalli</td>
+      <td>2</td>
+      <td>8,080</td>
+      <td>17.77</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>PLECOS</td>
+      <td>Infrastructure</td>
+      <td>Warehouse & Cold Storages</td>
+      <td>KIADB Industrial Area Mastenahalli</td>
+      <td>2</td>
+      <td>8,080</td>
+      <td>17.77</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td>Bhakti Enterprises</td>
+      <td>Infrastructure</td>
+      <td>Warehouse & Cold Storages</td>
+      <td>KIADB Industrial Area Dabaspet 5th Phase</td>
+      <td>2</td>
+      <td>8,080</td>
+      <td>19.00</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>HKR Gowda</td>
+      <td>Infrastructure</td>
+      <td>Warehouse & Cold Storages</td>
+      <td>KIADB Industrial Area Dabaspet 5th Phase</td>
+      <td>2</td>
+      <td>8,080</td>
+      <td>19.00</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>Kalikamba Devi Industries</td>
+      <td>Infrastructure</td>
+      <td>Warehouse & Cold Storages</td>
+      <td>KIADB Industrial Area Mastenahalli</td>
+      <td>2</td>
+      <td>8,080</td>
+      <td>15.18</td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td>Ira Infracon</td>
+      <td>Infrastructure</td>
+      <td>Warehouse & Cold Storages</td>
+      <td>KIADB Industrial Area Mastenahalli</td>
+      <td>2</td>
+      <td>8,080</td>
+      <td>15.18</td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td>Padmavathi Infrastructure</td>
+      <td>Infrastructure</td>
+      <td>Warehouse & Cold Storages</td>
+      <td>KIADB Industrial Area Mastenahalli</td>
+      <td>2</td>
+      <td>8,080</td>
+      <td>15.18</td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td>Pranav Infrastructure</td>
+      <td>Infrastructure</td>
+      <td>Warehouse & Cold Storages</td>
+      <td>KIADB Industrial Area Mastenahalli</td>
+      <td>2</td>
+      <td>8,080</td>
+      <td>15.18</td>
+    </tr>
+    <tr>
+      <td>29</td>
+      <td>SLV Industries</td>
+      <td>Infrastructure</td>
+      <td>Warehouse & Cold Storages</td>
+      <td>KIADB Industrial Area Mastenahalli</td>
+      <td>2</td>
+      <td>8,080</td>
+      <td>15.18</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td>Mahaveer Distributors</td>
+      <td>Infrastructure</td>
+      <td>Warehouse & Cold Storages</td>
+      <td>KIADB Industrial Area – Dabaspet 5th Phase</td>
+      <td>5</td>
+      <td>20,200</td>
+      <td>26.12</td>
+    </tr>
+    <tr>
+      <td>31</td>
+      <td>Sri Venkateshwara Industries</td>
+      <td>Infrastructure</td>
+      <td>Warehouse & Cold Storages</td>
+      <td>KIADB Industrial Area Mastenahalli</td>
+      <td>2</td>
+      <td>8,080</td>
+      <td>15.18</td>
+    </tr>
+    <tr>
+      <td>32</td>
+      <td>Bhawar Industrial Park</td>
+      <td>Infrastructure</td>
+      <td>Warehouse & Cold Storages</td>
+      <td>KIADB Industrial Area Dabaspet 5th Phase</td>
+      <td>10</td>
+      <td>40,400</td>
+      <td>96.00</td>
+    </tr>
+    <tr>
+      <td>33</td>
+      <td>Sri Siddeshwara Enterprises</td>
+      <td>Infrastructure</td>
+      <td>Warehouse & Cold Storages</td>
+      <td>KIADB Industrial Area Mindalli</td>
+      <td>2</td>
+      <td>8,080</td>
+      <td>15.67</td>
+    </tr>
+    <tr>
+      <td>34</td>
+      <td>Sri Vigneshwara Enterprises</td>
+      <td>Infrastructure</td>
+      <td>Warehouse & Cold Storages</td>
+      <td>KIADB Industrial Area Mindalli</td>
+      <td>2</td>
+      <td>8,080</td>
+      <td>15.67</td>
+    </tr>
+    <tr>
+      <td>35</td>
+      <td>Padmavathi Logistics</td>
+      <td>Infrastructure</td>
+      <td>Warehouse & Cold Storages</td>
+      <td>KIADB Industrial Area Mindalli</td>
+      <td>2</td>
+      <td>8,080</td>
+      <td>15.67</td>
+    </tr>
+    <tr>
+      <td>36</td>
+      <td>Naveen Enterprises</td>
+      <td>Infrastructure</td>
+      <td>Warehouse & Cold Storages</td>
+      <td>KIADB Industrial Area Mindalli</td>
+      <td>2</td>
+      <td>8,080</td>
+      <td>15.67</td>
+    </tr>
+    <tr>
+      <td>37</td>
+      <td>Integrated Solar Power Pvt Ltd</td>
+      <td>Infrastructure</td>
+      <td>Warehouse & Cold Storages</td>
+      <td>KIADB Industrial Area Mindalli</td>
+      <td>50</td>
+      <td>202,000</td>
+      <td>432.00</td>
+    </tr>
+    <tr>
+      <td>38</td>
+      <td>Sri Rameshwara Infrastructure</td>
+      <td>Infrastructure</td>
+      <td>Warehouse & Cold Storages</td>
+      <td>KIADB Industrial Area – Dabaspet 5th Phase</td>
+      <td>2</td>
+      <td>8,080</td>
+      <td>15.67</td>
+    </tr>
+    <tr>
+      <td>39</td>
+      <td>Sri Nangundeshwara Infrastructure</td>
+      <td>Infrastructure</td>
+      <td>Warehouse & Cold Storages</td>
+      <td>KIADB Industrial Area – Dabaspet 5th Phase</td>
+      <td>2</td>
+      <td>8,080</td>
+      <td>15.67</td>
+    </tr>
+    <tr>
+      <td>40</td>
+      <td>Sharoff Steel Traders</td>
+      <td>Infrastructure</td>
+      <td>Warehouse & Cold Storages</td>
+      <td>KIADB Industrial Area – Dabaspet 5th Phase</td>
+      <td>8</td>
+      <td>32,320</td>
+      <td>76.00</td>
+    </tr>
+    <tr>
+      <td>41</td>
+      <td>G M Enterprises and Traders</td>
+      <td>Infrastructure</td>
+      <td>Warehouse & Cold Storages</td>
+      <td>KIADB Industrial Area Devanahalli</td>
+      <td>2</td>
+      <td>8,080</td>
+      <td>16.00</td>
+    </tr>
+    <tr>
+      <td>42</td>
+      <td>M/s. Sanjana Infra</td>
+      <td>Infrastructure</td>
+      <td>Warehouse & Cold Storages</td>
+      <td>KIADB Industrial Area Devanahalli</td>
+      <td>2</td>
+      <td>8,080</td>
+      <td>16.50</td>
+    </tr>
+    <tr>
+      <td>43</td>
+      <td>Ramaa Developers</td>
+      <td>Infrastructure</td>
+      <td>Warehouse & Cold Storages</td>
+      <td>KIADB Industrial Area Aerospace Park Devanahalli</td>
+      <td>8</td>
+      <td>32,320</td>
+      <td>96.00</td>
+    </tr>
+    <tr>
+      <td>44</td>
+      <td>Rajanis Enterprises</td>
+      <td>Infrastructure</td>
+      <td>Warehouse & Cold Storages</td>
+      <td>KIADB Industrial Area Aerospace Park Devanahalli</td>
+      <td>5</td>
+      <td>20,200</td>
+      <td>65.00</td>
+    </tr>
+    <tr>
+      <td>45</td>
+      <td>Shyam Industries</td>
+      <td>Infrastructure</td>
+      <td>Warehouse & Cold Storages</td>
+      <td>KIADB Industrial Area Aerospace Park Devanahalli</td>
+      <td>2</td>
+      <td>8,080</td>
+      <td>30.00</td>
+    </tr>
+    <tr>
+      <td>46</td>
+      <td>Gujrat Steel Enterprises</td>
+      <td>Infrastructure</td>
+      <td>Warehouse & Cold Storages</td>
+      <td>KIADB Industrial Area Aerospace Park Devanahalli</td>
+      <td>2</td>
+      <td>8,080</td>
+      <td>30.00</td>
+    </tr>
+    <tr>
+      <td>47</td>
+      <td>Heritage Foods (P) Ltd</td>
+      <td>Infrastructure</td>
+      <td>Warehouse & Cold Storages</td>
+      <td>KIADB Industrial Area Aerospace Park Devanahalli</td>
+      <td>2</td>
+      <td>8,080</td>
+      <td>30.00</td>
+    </tr>
+    <tr>
+      <td>48</td>
+      <td>Icon Logistics Services</td>
+      <td>Infrastructure</td>
+      <td>Warehouse & Cold Storages</td>
+      <td>KIADB Industrial Area Aerospace Park Devanahalli</td>
+      <td>2</td>
+      <td>8,080</td>
+      <td>30.00</td>
+    </tr>
+    <tr>
+      <td>49</td>
+      <td>Jaya Srinivasa Enterprises</td>
+      <td>Infrastructure</td>
+      <td>Warehouse & Cold Storages</td>
+      <td>KIADB Industrial Area Aerospace Park Devanahalli</td>
+      <td>2</td>
+      <td>8,080</td>
+      <td>30.00</td>
+    </tr>
+    <tr>
+      <td>50</td>
+      <td>Sri Krishna Infra Developers</td>
+      <td>Infrastructure</td>
+      <td>Warehouse & Cold Storages</td>
+      <td>KIADB Industrial Area Aerospace Park Devanahalli</td>
+      <td>2</td>
+      <td>8,080</td>
+      <td>30.00</td>
+    </tr>
+  </tbody>
+</table>
               </div>
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   </section>
@@ -280,13 +3528,13 @@
         <a href="">
           <i class="fa fa-phone" aria-hidden="true"></i>
           <span>
-            Call : +01 123455678990
+            Call : +91-9538888160
           </span>
         </a>
         <a href="">
           <i class="fa fa-envelope" aria-hidden="true"></i>
           <span>
-            Email : demo@gmail.com
+            Email : deepakplannbiz@gmail.com
           </span>
         </a>
         <a href="">
@@ -306,16 +3554,16 @@
               </h4>
               <div class="info_links_menu">
                 <a class="" href="index.html">Home <span class="sr-only">(current)</span></a>
-                <a class="" href="service.html">Services</a>
+                <!-- <a class="" href="service.html">Services</a> -->
                 <a class="" href="about.html"> About</a>
                 <a class="" href="project.html">Project</a>
-                <a class="" href="testimonial.html">Testimonial</a>
+                <!-- <a class="" href="testimonial.html">Testimonial</a> -->
                 <a class="" href="contact.html">Contact Us</a>
               </div>
             </div>
           </div>
           <div class="col-sm-6 col-md-4 col-lg-3 mx-auto">
-            <div class="info_post">
+            <!-- <div class="info_post">
               <h5>
                 INSTAGRAM FEEDS
               </h5>
@@ -339,7 +3587,7 @@
                   <img src="images/instagram.jpg" alt="">
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
           <div class="col-md-4">
             <div class="info_form">
@@ -361,7 +3609,7 @@
           <div class="col-md-2">
             <div class="info_logo">
               <a href="">
-                <img src="images/logo2.png" alt="">
+                <img src="images/logo.jpeg" alt="">
               </a>
             </div>
           </div>
@@ -388,16 +3636,18 @@
   </section>
   <!-- end info_section -->
 
+
   <!-- footer section -->
   <footer class="footer_section">
     <div class="container">
       <p>
         &copy; <span id="displayYear"></span> All Rights Reserved By
-        <a href="https://html.design/">Free Html Templates</a>
+        <a href="index.html">Plannbiz</a>
       </p>
     </div>
   </footer>
   <!-- footer section -->
+
 
   <!-- jQery -->
   <script src="js/jquery-3.4.1.min.js"></script>
@@ -417,6 +3667,44 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
   </script>
   <!-- End Google Map -->
+<!-- Bootstrap JS CDN -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Ck5m5NUsVHg1o1L+8S0FVvKZu2TC9GY0cdzYw3Yc/Jz3BeFvFWfP0nKz/a9DWkOS" crossorigin="anonymous"></script>
+
+<!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-kF4DY3BF1111TRrSGlpGpW1O6F4WpQ/y2r5c5czU+I7ZD4Q+gjFDbm4M3pokpjc" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Ck5m5NUsVHg1o1L+8S0FVvKZu2TC9GY0cdzYw3Yc/Jz3BeFvFWfP0nKz/a9DWkOS" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-kF4DY3BF1111TRrSGlpGpW1O6F4WpQ/y2r5c5czU+I7ZD4Q+gjFDbm4M3pokpjc" crossorigin="anonymous"></script>
+
+<!-- Custom JavaScript -->
+<script>
+  function filterItems(item){
+    var navItems1 = document.querySelectorAll(`a.item`);
+      navItems1.forEach((div)=>{
+        div.style.color = '#000'
+      })
+      var navItems = document.querySelectorAll(`.${item}`);
+      navItems.forEach((div)=>{
+        div.style.color = 'orange'
+      })
+    
+      var filterItems = document.querySelectorAll('.filter-item');
+      filterItems.forEach((div)=>{
+        div.style.display = 'none';
+      })
+      var activeItem = document.getElementById(item);
+      if(activeItem){
+
+        activeItem.style.display = 'block';
+      }
+
+  }
+  window.onload=function(){
+   var els =document.getElementsByClassName("all")
+   console.log({els})
+};
+    // Select all navigation item
+
+</script>
 
 </body>
 

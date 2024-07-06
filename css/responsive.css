@@ -37,6 +37,19 @@
   .slider_section {
     padding: 75px 0;
   }
+  @keyframes moveInwards {
+    0% {
+      transform: scale(1) translateZ(0);
+    }
+  
+    60% {
+      transform: scale(1.05) translateZ(0);
+    }
+  
+    100% {
+      transform: scale(1) translateZ(0);
+    }
+  }
 
   .project_section .filter_box {
     flex-direction: column;
