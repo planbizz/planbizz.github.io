@@ -17,33 +17,54 @@
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js" integrity="sha512-vc58qvvBdrDR4etbxMdlTt4GBQk1qjvyORR2nrsPsFPyrs+/u5c3+1Ct6upOgdZoIl7eq6k3a1UPDSNAQi/32A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap" rel="stylesheet">
 
   <!--owl slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
   <!-- font awesome style -->
-  <link href="css/font-awesome.min.css" rel="stylesheet" />
 
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
   <style>
+      .consultind{
+      display: flex;
+      width: 300px;
+      padding: 20px;
+      gap: 10px;
+      border: 1px solid;
+      margin: 5px;
+      font-size: medium;    
+      flex-direction: column;
+      border-radius: 10px;
+      background-color: #03001a;
+      color: #dddddd;
+    }
+    .consultind:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .consultind h1{
+      font-family: "Fredoka", sans-serif;
+      color: #c7ff7e;
+    }
      .info-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
             padding: 20px;
-            background-color: #f7f9fc;
             font-family: Arial, sans-serif;
             color: #333;
         }
         .info-box {
-            background-color: #fff;
+            background-color: #f8f5d7;
             border: 1px solid #ddd;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -95,7 +116,128 @@ table {
             padding: 6px; /* Smaller padding */
             font-size: 12px; /* Smaller font size */
         }
+        #consult img {
+          display: none;
+        }
+        .brander{
+          font-size: 54px !important;
+        }
     }
+
+    .fredoka {
+  font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 38ppx;
+    letter-spacing: 2px;
+    color: antiquewhite !important;
+    font-variation-settings:"wdth" 100;
+    }
+    .fredoka .brander{
+      font-size: 64px;
+      letter-spacing: 7px;
+      color: #c7ff7e;
+    }
+
+    .projects{
+      border-radius: 20px;
+      color: #FFF;
+      background: #0f1207;  /* fallback for old browsers */
+      font-family: "Fredoka", sans-serif;
+      letter-spacing: 3px;
+
+
+    }
+    .card-header {
+            background-color: rgba(255, 255, 255, 0.1);
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .card-body {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .card-footer {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        .card {
+            margin-bottom: 20px;
+        }
+
+        .container.marketing {
+  padding: 75px 0; /* Increased top and bottom padding */
+  background-color: #9ae4f8; /* Light gray background */
+}
+
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 30px; /* Added margin for spacing */
+  color: #333; /* Darker text color */
+  text-align: center; /* Center align the title */
+}
+
+.featurette-image {
+  width: 400px; /* Adjusted width for better responsiveness */
+  height: 400px; /* Adjusted height for balance */
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Softened shadow effect */
+  margin-bottom: 30px; /* Added margin for spacing */
+}
+
+.list-group-item {
+  border-color: rgba(0, 0, 0, 0.125);
+  padding: 20px; /* Increased padding for better readability */
+}
+
+@media (max-width: 768px) {
+  /* Styles for screens smaller than 768px */
+  .featurette-image {
+    width: 100%; /* Make image full width on smaller screens */
+  }
+  .col-md-5,
+  .col-md-7 {
+    order: 1; /* Swap order on smaller screens for better layout flow */
+  }
+}
+
+
+ .list-group-item {
+        background-color: #08280f;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 15px;
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #333;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        min-width: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-height: 300px;
+        min-height: 300px;
+    }
+
+    .list-group-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+  .list-group-item h5 {
+        margin: 0 0 10px 0;
+        font-size: 32px;
+        font-weight: bold;
+        color: #FFF;
+    }
+
+ .list-group-item span {
+        font-weight: normal;
+        color: #d6ecd7;
+    }
+
 
   </style>
 
@@ -181,7 +323,7 @@ table {
                   <a class="nav-link" href="project.html">Projects</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="about.html"> About</a>
+                  <a class="nav-link" href="about.html"> About Us</a>
                 </li>
                 <!-- <li class="nav-item">
                   <a class="nav-link" href="testimonial.html">Testimonial</a>
@@ -217,10 +359,10 @@ table {
             <div class="container ">
               <div class="row">
                 <div class="col-md-10 mx-auto">
-                  <div class="detail-box">
-                    <h1>
+                  <div class="detail-box  animate__animated animate__bounce">
+                    <h1 class="fredoka">
                       WELCOME TO <br>
-                      PLANBIZZ CONSULTING <br>
+                      <span class="brander"> PLANBIZZ CONSULTING </span> <br>
                       PVT LTD
                     </h1>
                     <div class="btn-box">
@@ -341,13 +483,62 @@ table {
 
     <!-- end slider section -->
   </div>
+  <div id="consult" style="background-color: #d8d2c6; padding: 30px;">
+    <div style="background-color: #fffff1; border-radius: 20px; padding: 50px; display: flex; justify-content: space-between; width: 100%;">
+        <div> 
+            <h1 class="fredoka" style="color: #191919 !important;"> Expertise Consultants for </h1> 
+             <div style="display: flex; flex-wrap: wrap; gap: 50px; margin-top: 20px;">
+            <div class="consultind">
+              <h1> KIADB</h1>
+              <p> KIADB Projects for Industrial Land Allotments, Plan Approval, PCB, Etc.</p>
+            </div>
+            <div class="consultind"> 
+              <h1> MoFPI</h1> 
+              <p>  MAgro Processing Cluster,CEFPPC,Cold Chain, Operation Green  and Projects approval </p>
+            </div>
+            <div class="consultind"> <h1> Agriculture </h1>
+              <p>Agribusiness and Farming, Preparation of Detail Project Reports as per type of Industries </p> 
+            </div>
+            <div class="consultind"> <h1>Startup </h1> <div>Business development & Financial Strategies,Setting up Startup Industries,   HNI & VC Funding </div>  </div>
+            <div class="consultind"> <h1> FMCG </h1>  <div> Food Retailing,  MSME Schemes etc </div> </div>
+          </div>
+          </div>
+        <div>
+          <img src="images/Mission.jpg" alt="mission" style="border-radius: 10px; min-width: 35vw;"/>
+       </div>
+    </div>
+  </div>
+
+  <div style="background-color: #d8d2c6; padding: 20px 3%;">
+      <h1 class="fredoka animate__animated animate__bounce"  style="color: #03001a !important; margin-bottom: 30px;">Benefits of Partnering with PlannBiz Consulting</h1>
+      <div class="featurette" style="background-color: #fffff1; border-radius: 20px; padding: 50px; display: flex; gap:30px; justify-content: space-between; align-content:center; width: 100%;">
+
+            <div class="list-group-item animate__animated animate__bounce">
+                <h5>Cross-industry experience</h5>
+                <span> Building and orchestrating products and services by leveraging PLANNBIZ’ expertise of working with customers across industries</span>
+            </div>
+            <div class="list-group-item animate__animated animate__bounce">
+                <h5>Deep domain and technical expertise</h5>
+                <span> Leveraging product and enterprise knowledge and technological expertise across the manufacturing value chain to create operating business models and technology applications that are benchmarked against industry standards.</span>
+              </div>
+            <div  class="list-group-item animate__animated animate__bounce">
+                <h5>Assets and frameworks</h5>
+                <span> PLANNBIZ experienced consultants, backed by mature best practices, data and analytics-centric platforms and solutions, enable faster solution deployments.</span>
+              </div>
+            <div class="list-group-item animate__animated animate__bounce">
+                <h5>Co-innovation</h5>
+                <span> Accelerating enterprises path to value through a network of start-ups, academic partners. From market disruptions to new operating models, PlannBiz can help.</span>
+              </div>
+
+      </div>
+  </div>
 
   <!-- Projects -->
-  <section class="service_section layout_padding" style="margin-top: 60px;">
-    <div class="service_container">
+  <section class="service_section layout_padding" style="background-color: #d8d2c6;">
+    <div class="service_container projects">
       <div class="container">
         <div class="heading_container">
-          <h1>
+          <h1 class="animate__animated animate__bounce">
             Projects
           </h1>
         </div>
@@ -373,60 +564,6 @@ table {
       </div>
       
     </a>
-        <div class="heading_container">
-          <div>
-            <table style="margin-top: 30px;">
-              <thead>
-                <tr>
-                    <th colspan="5">Projects Summary</th>
-                </tr>
-                  <tr>
-                      <th>Category</th>
-                      <th>No. of projects</th>
-                      <th>Area in Acre</th>
-                      <th>Space in Sq Mtrs</th>
-                      <th>Project Value INR Cr.</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <tr>
-                      <td>Amenity</td>
-                      <td>12</td>
-                      <td>30.85</td>
-                      <td>124,180</td>
-                      <td>598</td>
-                  </tr>
-                  <tr>
-                      <td>Infrastructure</td>
-                      <td>46</td>
-                      <td>304.67</td>
-                      <td>1,230,867</td>
-                      <td>3,169</td>
-                  </tr>
-                  <tr>
-                      <td>Manufacturing</td>
-                      <td>92</td>
-                      <td>463.75</td>
-                      <td>1,873,550</td>
-                      <td>5,322</td>
-                  </tr>
-                  <tr>
-                      <td><strong>Total</strong></td>
-                      <td><strong>150</strong></td>
-                      <td><strong>799.27</strong></td>
-                      <td><strong>3,228,597</strong></td>
-                      <td><strong>9,089</strong></td>
-                  </tr>
-              </tbody>
-          </table>
-            <div class="btn-box">
-            <div class="btn-box">
-              <a href="/project.html">
-                Read More
-              </a>
-            </div>
-          </div>
-          </div>
         </div>
         </div>  
        </div> 
@@ -436,19 +573,18 @@ table {
 
   <section class="service_section layout_padding">
     <div class="service_container">
-      <div class="container ">
-        <div class="heading_container">
+      <div class="container">
+        <div class="heading_container animate__animated animate__bounce">
           <h2>
             Categories
           </h2>
         </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-3">
-            <div class="box ">
-              <div class="img-box">
-                <img src="images/s1.png" alt="">
+        <div style="display: flex; gap:30px; flex-wrap: wrap;">
+            <div class="box animate__animated animate__bounce" style="width: 300px; height: auto; box-shadow: #191919; border-radius: 20px; border: solid 1px;">
+              <div>
+                <img src="images/projects.jpg" alt="" style="border-top-right-radius: 20px; border-top-left-radius: 20px; width: 100%; height: 200px">
               </div>
-              <div class="detail-box">
+              <div class="detail-box" style="padding: 20px">
                 <h5>
                   Manufacturing
                 </h5>
@@ -458,15 +594,13 @@ table {
                 <a href="/project.html">
                   Read More
                 </a>
-              </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="box ">
-              <div class="img-box">
-                <img src="images/s2.png" alt="">
+            <div class="box animate__animated animate__bounce" style="width: 300px; height: auto; box-shadow: #191919; border-radius: 20px; border: solid 1px;">
+              <div>
+                <img src="images/project2.jpg" alt="" style="border-top-right-radius: 20px; border-top-left-radius: 20px; width: 100%; height: 200px">
               </div>
-              <div class="detail-box">
+              <div class="detail-box" style="padding: 20px">
                 <h5>
                   Amenity
                 </h5>
@@ -478,6 +612,22 @@ table {
                 </a>
               </div>
             </div>
+            <div class="box animate__animated animate__bounce" style="width: 300px; height: auto; box-shadow: #191919; border-radius: 20px; border: solid 1px;">
+              <div>
+                <img src="images/project1.jpg" alt="" style="border-top-right-radius: 20px; border-top-left-radius: 20px; width: 100%; height: 200px">
+              </div>
+              <div class="detail-box" style="padding: 20px">
+                <h5>
+                  Infrastructure
+                </h5>
+                <p>
+                  PlannBiz Consulting has completed 46 projects across 304 acres, allocating 12.30 lakh square meters, with a total project value of Rs. 3,169 crores.
+                </p>
+                <a href="">
+                  Read More
+                </a>
+              </div>
+          </div>
           </div>
           <!-- <div class="col-md-6 col-lg-3">
             <div class="box ">
@@ -499,24 +649,7 @@ table {
               </div>
             </div>
           </div> -->
-          <div class="col-md-6 col-lg-3">
-            <div class="box ">
-              <div class="img-box">
-                <img src="images/s4.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Infrastructure
-                </h5>
-                <p>
-                  PlannBiz Consulting has completed 46 projects across 304 acres, allocating 12.30 lakh square meters, with a total project value of Rs. 3,169 crores.
-                </p>
-                <a href="">
-                  Read More
-                </a>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
     </div>
@@ -533,11 +666,11 @@ table {
         <div class="col-md-6">
           <div class="detail-box">
             <div class="heading_container">
-              <h2>
+              <h2 class="animate__animated animate__bounce">
                 About Us
               </h2>
             </div>
-            <p>
+            <p class="animate__animated animate__bounce">
               Welcome to PlannBiz Consulting Pvt. Ltd., your partner in comprehensive proposal development and business advisory services. We help businesses excel across various verticals, from initial concepts to fully operational projects.
 
 At PlannBiz Consulting, we drive real growth and positive transformation by leveraging our extensive experience and knowledge. We transform enterprise value chains into adaptive ecosystems that sense, learn, and evolve.
@@ -1084,12 +1217,44 @@ Partner with PlannBiz Consulting to turn vision into reality and make a meaningf
     $(this).prop('Counter',0).animate({
         Counter: $(this).text()
     }, {
-        duration: 10000,
+        duration: 2000,
         easing: 'swing',
         step: function (now) {
             $(this).text(Math.ceil(now));
         }
     });
+});
+  </script>
+
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const observerOptions = {
+    root: null, // Use the viewport as the root
+    rootMargin: "0px",
+    threshold: 0.1 // Trigger when 10% of the element is visible
+  };
+
+  const callback = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const target = entry.target;
+        // Find all classes that start with "animate"
+        const animateClasses = [...target.classList].filter(cls => cls.startsWith('animate'));
+        // Remove all animate classes
+        animateClasses.forEach(cls => target.classList.remove(cls));
+        void target.offsetWidth; // Trigger a reflow
+        // Add all animate classes back
+        animateClasses.forEach(cls => target.classList.add(cls));
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(callback, observerOptions);
+
+  const animatedDivs = document.querySelectorAll(".animate__animated");
+  animatedDivs.forEach(div => {
+    observer.observe(div);
+  });
 });
   </script>
 </body>

@@ -20,7 +20,11 @@
 
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-
+  <link
+    rel="stylesheet"
+    async
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
   <!--owl slider stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
@@ -157,7 +161,7 @@
                   <a class="nav-link" href="project.html">Projects</a>
                 </li>
                 <li class="nav-item active">
-                  <a class="nav-link" href="about.html"> About</a>
+                  <a class="nav-link" href="about.html"> About Us</a>
                 </li>
                 <!-- <li class="nav-item">
                   <a class="nav-link" href="testimonial.html">Testimonial</a>
@@ -195,10 +199,10 @@
       </div>
 
       <div class="row">
-         <div class="about-us">
+         <div class="about-us animate__animated animate__backInRight">
             <div>
                 <div class="image-holder">
-                    <img src="/images/vishnu.png" alt="Dr Vishnuvardhana" />
+                    <img src="images/vishnu.png" alt="Dr Vishnuvardhana" />
                 </div>
                 <div class="about-founder">
                   <h2 class="name">Dr.Vishnuvardhana D</h2>
@@ -211,10 +215,10 @@
             </div>
 
          </div>
-         <div class="about-us">
+         <div class="about-us animate__animated animate__backInLeft">
           <div>
               <div class="image-holder">
-                  <img src="/images/dharmendra.png" alt="Dr Dharmendra" />
+                  <img src="images/dharmendra.png" alt="Dr Dharmendra" />
               </div>
               <div class="about-founder">
                 <h2 class="name">Dharmendra P</h2>
@@ -225,10 +229,10 @@
           </div>
 
        </div>
-       <div class="about-us">
+       <div class="about-us animate__animated animate__backInRight">
         <div>
             <div class="image-holder">
-                <img src="/images/deepak.jpeg" alt="Dr Deepak" />
+                <img src="images/deepak.jpeg" alt="Dr Deepak" />
             </div>
             <div class="about-founder">
               <h2 class="name">Deepak Kaverappa</h2>
@@ -239,10 +243,10 @@
         </div>
 
      </div>
-     <div class="about-us">
+     <div class="about-us animate__animated animate__backInLeft">
       <div>
           <div class="image-holder">
-              <img src="/images/inder.png" alt="Dr Inder" />
+              <img src="images/inder.png" alt="Dr Inder" />
           </div>
           <div class="about-founder">
             <h2 class="name">Inder Chand Singhvi </h2>
@@ -253,10 +257,10 @@
       </div>
 
    </div>
-   <div class="about-us">
+   <div class="about-us animate__animated animate__backInRight">
     <div>
         <div class="image-holder">
-            <img src="/images/aseem.png" alt="Dr Inder" />
+            <img src="images/aseem.png" alt="Dr Inder" />
         </div>
         <div class="about-founder">
           <h2 class="name">Aseem Vohra</h2>
@@ -420,7 +424,41 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
   </script>
   <!-- End Google Map -->
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  let animationTriggered = false; // Flag to track if animation has been triggered
 
+  const observerOptions = {
+    root: null, // Use the viewport as the root
+    rootMargin: "0px",
+    threshold: 0.1 // Trigger when 10% of the element is visible
+  };
+
+  const callback = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !animationTriggered) {
+        const target = entry.target;
+        // Find all classes that start with "animate"
+        const animateClasses = [...target.classList].filter(cls => cls.startsWith('animate'));
+        // Remove all animate classes
+        animateClasses.forEach(cls => target.classList.remove(cls));
+        void target.offsetWidth; // Trigger a reflow
+        // Add all animate classes back
+        animateClasses.forEach(cls => target.classList.add(cls));
+        
+        animationTriggered = true; // Set flag to true after animation is triggered
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(callback, observerOptions);
+
+  const animatedDivs = document.querySelectorAll(".animate__animated");
+  animatedDivs.forEach(div => {
+    observer.observe(div);
+  });
+});
+      </script>
 </body>
 
 </html>
