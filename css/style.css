@@ -1333,3 +1333,13 @@ a:focus {
   color: #FFF;
   font-size: 16px;
 }
+.dropdown-item:hover {
+  background-color: rgb(32, 45, 32);
+  color: white;
+}
+
+/* Hover effect for the main Projects link */
+.nav-link.dropdown-toggle:hover {
+  background-color: rgb(24, 64, 24);
+  color: white;
+}
