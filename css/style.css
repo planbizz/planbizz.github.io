@@ -428,7 +428,7 @@ a:focus {
 .slider_section .background{
   background-image: url(../images/slider-bg.jpg);
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
 
   z-index: 0;
   animation: moveInwards 10s ease-in-out infinite;
@@ -1272,29 +1272,33 @@ a:focus {
 
 #contact-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   border-radius: 8px;
   width: 100%; /* Adjust width as needed */
   z-index: 2;
   top: 200px; /* Adjust top position as needed */
-  padding: 60px 30px;
+  padding: 60px 100px;
+  gap: 20px;
   animation: bounceInUp 1s ease;
 
   @media (max-width: 768px) {
-      width: 90%;
+      width: 100%;
+      padding: 10px 30px;
   }
 }
 
 .card {
   display: flex;
+  flex-direction: row;
   padding: 30px;
+  min-height: 400px;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background-color: #bc570d;;
+  background-color: #0c383b;;
   color: #FFF;
-  width: 350px; /* Adjust width as needed */
+  width: 450px; /* Adjust width as needed */
   margin-top: 30px;
   border-radius: 8px;
   animation: backInRight 1s ease;
@@ -1315,16 +1319,34 @@ a:focus {
   display: flex;
   flex-direction: column;
   font-size: 14px;
+  gap: 10px;
   margin-top: 10px;
 }
 
 .holder2 {
   display: flex;
-  align-items: center;
+  align-items: center;s
   gap: 15px;
   font-size: 12px;
 }
 .card a{
   color: #FFF;
   font-size: 16px;
+}
+.dropdown-item:hover {
+  background-color: rgb(32, 45, 32);
+  color: white;
+}
+
+/* Hover effect for the main Projects link */
+.nav-link.dropdown-toggle:hover {
+  background-color: rgb(24, 64, 24);
+  color: white;
+}
+.info_section  .container .contact_nav{
+  display: none !important;
+}
+
+.header_section .header_top{
+  display: none !important;
 }

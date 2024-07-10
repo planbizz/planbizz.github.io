@@ -11,8 +11,7 @@
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
-
-  <title>Plannbiz</title>
+  <title>PlannBiz Consulting Blog - Agribusiness and Farming</title>
 
 
   <!-- bootstrap core css -->
@@ -36,46 +35,35 @@
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
   <style>
-    .about-us{
-      width: 100%;
-      background-color: #071a2b;
-      min-height: 500px;
-      padding: 20px;
-      margin: 20px 0px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: #FFF;
-      border-radius: 8px;
-      gap: 20px;
-    }
-    .image-holder{
-      padding: 30px;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #2a2a2a;
-    }
-    .image-holder img{
-      height: 120px;
-      width: 120px;
-      border-radius: 50%;
-      object-fit: contain;
-      background-color: #eff4b4;
-    }
-    .name{
-      font-size: 24px;
-      text-align: center;
-      margin: 10px 0px;
-    }
-    .position{
-      font-size: 18px;
-      text-align: center;
-      margin: 10px 0px;
-      color: #a4a4a3;
-    }
+     .blog-header {
+            color: #ffffff;
+            text-align: center;
+            border-radius: 10px;
+          
+        }
+        .content {
+            padding: 20px;
+            width: 90vw;
+            color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            margin: 60px 0px;
+            color: #ffffff;
+        }
+        .container li::before {
+            content: "\2713";
+            font-weight: bold;
+            display: inline-block; 
+            width: 1em;
+            color: #ffffff;
+            margin-left: -1em;
+            margin-right: 0.5em;
+        }
+        .container li li::before {
+            content: "\2713";
+        }
     
   </style>
 
@@ -203,37 +191,62 @@
   </div>
 
   <!-- about section -->
-  <section class="about_section" style="margin:30px 0px 50px;">
-    <div class="container  ">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="detail-box">
-            <div class="heading_container">
-              <h2 class="animate__animated animate__bounce">
-                About Us
-              </h2>
-            </div>
-            <p class="animate__animated ">
-              Welcome to PlannBiz Consulting Pvt. Ltd., your partner in comprehensive proposal development and business advisory services. We help businesses excel across various verticals, from initial concepts to fully operational projects.
+<section  style="background-color: #031226; width: 100%; height: max-content;">
+ 
+    <div class="container-fluid content animate__animated">
+        <div class="blog-header">
 
-At PlannBiz Consulting, we drive real growth and positive transformation by leveraging our extensive experience and knowledge. We transform enterprise value chains into adaptive ecosystems that sense, learn, and evolve.
+            <h1>Agribusiness and Farming</h1>
+        </div>  
+        <p>
+            Agribusiness encompasses the economic sectors for farming and farming-related commerce. It
+involves all the steps for getting agricultural goods to the market, including production,
+processing, and distribution.
+        </p>
+        <p>
+            Agribusiness is the complete value chain in agriculture, from the raw materials and resources
+            necessary to create biological products to distributors and retailers that get products to end
+            consumers. 
+        </p>
+        <p>
+            It can be separated into four links: input providers, producers, processors, and other service
+providers (such as marketers, distributors, etc.). Each link adds value to the output of the
+previous link until the biological material is consumed or used by the end consumer.
+        </p>
+        <p>
+            According to the United Nations, global agriculture value-add is worth over $3.5 trillion
+annually, 4% of the world’s GDP, and 27% of the total workforce.
+        </p>
+        <p>
+            Collective business activities that are performed from farm to table. It covers agricultural input
+suppliers, producers, agroprocessors, distributors, traders, exporters, retailers and consumers.
+Agro- industry refers to the establishment of linkages between enterprises and supply chains
+for developing, transforming and distributing specific inputs and products in the agriculture
+sector. Consequently, agro-industries are a subset of the agribusiness sector. Agribusiness and
+agro-industry both involve commercialization and value addition of agricultural and post-
+production enterprises, and the building of linkages among agricultural enterprises. The terms
+agribusiness and agro-industries are often associated with large-scale farming enterprises or
+enterprises involved in large-scale food production, processing, distribution and quality control
+of agricultural products.
+        </p>
 
-In today's market, customers seek experiences, not just products. We enable businesses to build connected, cognitive networks that support innovation at scale. Our solutions empower enterprises to deliver personalized experiences, provide smart products, and build resilient value chains.
-
-Partner with PlannBiz Consulting to turn vision into reality and make a meaningful difference in your business and community.
-            </p>
-          </div>
-        </div>
-        <div class="col-md-6 ">
-          <div class="img-box">
-            <img src="images/Consulting.jpg" alt="">
-          </div>
-        </div>
-
-      </div>
+        <h2>
+            We as Planbizz undertake the following activities for Agribusiness and
+            Farming Activities
+        </h2>
+  <ol>
+      <li>Procurement of Agricultural Land</li>
+      <li>Crop Planning</li>
+      <li>Irrigation Method</li>
+      <li>Complete Crop Cultivation Practises</li>
+      <li>Harvesting and Post Harvest technology</li>
+      <li>Organic Farming cultivation Practises</li>
+      <li>Market Linkage</li>
+      <li>Value added Product</li>
+      <li>Food processing</li>
+      <li>Export Business</li>
     </div>
-  </section>
-
+</section>
   <!-- end about section -->
   <!-- info section -->
   <section class="info_section ">
@@ -363,60 +376,6 @@ Partner with PlannBiz Consulting to turn vision into reality and make a meaningf
   </footer>
   <!-- footer section -->
 
-
-  <!-- jQery -->
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <!-- popper js -->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
-  <!-- bootstrap js -->
-  <script src="js/bootstrap.js"></script>
-  <!-- owl slider -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-  </script>
-  <!--  OwlCarousel 2 - Filter -->
-  <script src="https://huynhhuynh.github.io/owlcarousel2-filter/dist/owlcarousel2-filter.min.js"></script>
-  <!-- custom js -->
-  <script src="js/custom.js"></script>
-  <!-- Google Map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
-  </script>
-  <!-- End Google Map -->
-  <script>
-document.addEventListener("DOMContentLoaded", () => {
-  let animationTriggered = false; // Flag to track if animation has been triggered
-
-  const observerOptions = {
-    root: null, // Use the viewport as the root
-    rootMargin: "0px",
-    threshold: 0.1 // Trigger when 10% of the element is visible
-  };
-
-  const callback = (entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !animationTriggered) {
-        const target = entry.target;
-        // Find all classes that start with "animate"
-        const animateClasses = [...target.classList].filter(cls => cls.startsWith('animate'));
-        // Remove all animate classes
-        animateClasses.forEach(cls => target.classList.remove(cls));
-        void target.offsetWidth; // Trigger a reflow
-        // Add all animate classes back
-        animateClasses.forEach(cls => target.classList.add(cls));
-        
-        animationTriggered = true; // Set flag to true after animation is triggered
-      }
-    });
-  };
-
-  const observer = new IntersectionObserver(callback, observerOptions);
-
-  const animatedDivs = document.querySelectorAll(".animate__animated");
-  animatedDivs.forEach(div => {
-    observer.observe(div);
-  });
-});
-      </script>
 </body>
 
 </html>

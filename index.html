@@ -17,33 +17,60 @@
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js" integrity="sha512-vc58qvvBdrDR4etbxMdlTt4GBQk1qjvyORR2nrsPsFPyrs+/u5c3+1Ct6upOgdZoIl7eq6k3a1UPDSNAQi/32A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap" rel="stylesheet">
 
   <!--owl slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
   <!-- font awesome style -->
-  <link href="css/font-awesome.min.css" rel="stylesheet" />
 
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
   <style>
+      .consultind{
+      display: flex;
+      min-width: 46%;
+      max-width: 46%;
+      padding: 20px;
+      gap: 10px;
+      border: 1px solid;
+      margin: 5px;
+      font-size: medium;    
+      flex-direction: column;
+      border-radius: 10px;
+      background-color: #03001a;
+      color: #dddddd;
+    }
+    .consultind:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .consultind h2{
+      font-family: "Fredoka", sans-serif;
+      color: #c7ff7e;
+    }
+    .consultind a {
+      width: 100%;
+      text-align: right;
+      color:#f07b26;
+    }
      .info-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
             padding: 20px;
-            background-color: #f7f9fc;
             font-family: Arial, sans-serif;
             color: #333;
         }
         .info-box {
-            background-color: #fff;
+            background-color: #f8f5d7;
             border: 1px solid #ddd;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -60,7 +87,8 @@
         }
         .info-box p {
             margin: 5px 0 0;
-            font-size: 1em;
+            font-size: 20px;
+            font-weight: 700;
             color: #191919;
         }
 
@@ -95,7 +123,162 @@ table {
             padding: 6px; /* Smaller padding */
             font-size: 12px; /* Smaller font size */
         }
+        #consult img {
+          display: none;
+        }
+        .brander{
+          font-size: 44px !important;
+          text-shadow: 3px 4px #182019 !important;
+        }
     }
+
+    .fredoka {
+  font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 38ppx;
+    letter-spacing: 2px;
+    color: antiquewhite !important;
+    font-variation-settings:"wdth" 100;
+    
+    }
+    .fredoka .brander{
+      font-size: 64px;
+      letter-spacing: 7px;
+      color: #c7ff7e;
+      text-shadow: 3px 4px #182019 !important;
+    }
+
+    .projects{
+      border-radius: 20px;
+      color: #FFF;
+      background: #0f1207;  /* fallback for old browsers */
+      font-family: "Fredoka", sans-serif;
+      letter-spacing: 3px;
+
+
+    }
+    .card-header {
+            background-color: rgba(255, 255, 255, 0.1);
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .card-body {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .card-footer {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        .card {
+            margin-bottom: 20px;
+        }
+
+        .container.marketing {
+  padding: 75px 0; /* Increased top and bottom padding */
+  background-color: #9ae4f8; /* Light gray background */
+}
+
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 30px; /* Added margin for spacing */
+  color: #333; /* Darker text color */
+  text-align: center; /* Center align the title */
+}
+
+.featurette-image {
+  width: 400px; /* Adjusted width for better responsiveness */
+  height: 400px; /* Adjusted height for balance */
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Softened shadow effect */
+  margin-bottom: 30px; /* Added margin for spacing */
+}
+
+.list-group-item {
+  border-color: rgba(0, 0, 0, 0.125);
+  padding: 20px; /* Increased padding for better readability */
+  max-width: 350px;
+}
+
+@media (max-width: 768px) {
+  /* Styles for screens smaller than 768px */
+  .featurette-image {
+    width: 100%; /* Make image full width on smaller screens */
+  }
+  .col-md-5,
+  .col-md-7 {
+    order: 1; /* Swap order on smaller screens for better layout flow */
+  }
+  .consultind{
+    width: 100%;
+    min-width: 80%;
+    max-width: 100%;
+  }
+  #consult{
+    padding: 5px !important;
+  }
+  #consult>div{
+    padding:20px !important;
+  }
+  #cat-box{
+    width: 100%;
+    min-width: 100% !important;
+    max-width: 100% !important;
+  }
+  #inner{
+    padding: 5px !important;
+  }
+
+}
+
+.dropdown-item:hover {
+  background-color: rgb(32, 45, 32);
+  color: white;
+}
+
+/* Hover effect for the main Projects link */
+.nav-link.dropdown-toggle:hover {
+  background-color: rgb(24, 64, 24);
+  color: white;
+}
+
+ .list-group-item {
+        background-color: #08280f;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 15px;
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #333;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        min-width: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-height: 300px;
+        min-height: 300px;
+    }
+
+    .list-group-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+  .list-group-item h5 {
+        margin: 0 0 10px 0;
+        font-size: 32px;
+        font-weight: bold;
+        color: #FFF;
+    }
+
+ .list-group-item span {
+        font-weight: normal;
+        color: #d6ecd7;
+    }
+
 
   </style>
 
@@ -106,57 +289,7 @@ table {
   <div class="hero_area">
     <!-- header section strats -->
     <header class="header_section">
-      <!-- <div class="header_top">
-        <div class="container-fluid header_top_container">
-          <div class="lang_box dropdown">
-            <a href="#" title="Language" class="nav-link" data-toggle="dropdown" aria-expanded="true">
-              <img src="images/flag-uk.png" alt="flag" class=" " title="United Kingdom"> <i class="fa fa-angle-down " aria-hidden="true"></i>
-            </a>
-            <div class="dropdown-menu ">
-              <a href="#" class="dropdown-item">
-                <img src="images/flag-france.png" class="" alt="flag">
-              </a>
-            </div>
-            <span>
-              English
-            </span>
-          </div>
-          <div class="contact_nav">
-            <a href="">
-              <i class="fa fa-phone" aria-hidden="true"></i>
-              <span>
-                Call : +91-9538888160
-              </span>
-            </a>
-            <a href="">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-              <span>
-                Email : deepakplannbiz@gmail.com
-              </span>
-            </a>
-            <a href="">
-              <i class="fa fa-map-marker" aria-hidden="true"></i>
-              <span>
-                Location
-              </span>
-            </a>
-          </div>
-          <div class="social_box">
-            <a href="">
-              <i class="fa fa-facebook" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-twitter" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-linkedin" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-instagram" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
-      </div> -->
+    
       <div class="header_bottom">
         <div class="container-fluid">
           <nav class="navbar navbar-expand-lg custom_nav-container ">
@@ -178,11 +311,25 @@ table {
                   <a class="nav-link" href="service.html">Services</a>
                 </li> -->
                 <li class="nav-item">
-                  <a class="nav-link" href="project.html">Projects</a>
+                  <a class="nav-link" href="about.html"> About Us</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="about.html"> About</a>
+                  <a class="nav-link" href="ourteam.html"> Our Team</a>
                 </li>
+                <li class="nav-item dropdown d-none d-lg-block">
+                  <a class="nav-link dropdown-toggle" href="project.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Projects
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="project.html?id=amenity">Amenities</a>
+                    <a class="dropdown-item" href="project.html?id=infrastructure">Infrastructure</a>
+                    <a class="dropdown-item" href="project.html?id=manufacturing">Manufacturing</a>
+                  </div>
+                </li>
+                <li class="nav-item d-lg-none">
+                  <a class="nav-link" href="project.html">Projects</a>
+                </li>
+               
                 <!-- <li class="nav-item">
                   <a class="nav-link" href="testimonial.html">Testimonial</a>
                 </li> -->
@@ -190,17 +337,13 @@ table {
                   <a class="nav-link" href="contact.html">Contact Us</a>
                 </li>
               
-              <!-- <form class="form-inline">
-                  <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                  </button>
-                </form> -->
+            
               </ul>
-              <div class="quote_btn-container">
+              <!-- <div class="quote_btn-container">
                 <a href="" class="quote_btn">
                   Get A Quote
                 </a>
-              </div>
+              </div> -->
             </div>
           </nav>
         </div>
@@ -217,267 +360,215 @@ table {
             <div class="container ">
               <div class="row">
                 <div class="col-md-10 mx-auto">
-                  <div class="detail-box">
-                    <h1>
+                  <div class="detail-box  animate__animated animate__bounce">
+                    <h1 class="fredoka" style="text-align: center; 
+                    text-shadow: 3px 4px #182019 !important;">
                       WELCOME TO <br>
-                      PLANBIZZ CONSULTING <br>
+                      <span class="brander"> PLANNBIZ CONSULTING </span> <br>
                       PVT LTD
                     </h1>
-                    <div class="btn-box">
+                    <div class="info-container" style="margin-top: 80px;">
+                      <a href="project.html" class="info-box">
+                          <p>Projects Completed</p>
+                          <h2 class="count">150</h2>
+                      </a>
+                    <a  href="project.html" class="info-box">
+                      
+                      <p>Acres Allotted</p>
+                        <h2 class="count">799</h2>
+                    </a>
+                    <a href="project.html" class="info-box" >
+                      <p>Project Value</p>
+                         <div style="display: flex;"><h2>₹</h2>  <h2 class="count">9089</h2>   <h2> Cr</h2> </div>
+                      
+                    </a>
+                </div>
+
+                    <!-- <div class="btn-box">
                       <a href="/contact.html" style="z-index: 100;" class="btn1">
                         Contact Us
                       </a>
                       <a href="/about.html" style="z-index: 100;" class="btn2">
                         About Us
                       </a>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <!-- <div class="carousel-item">
-            <div class="container ">
-              <div class="row">
-                <div class="col-md-10 mx-auto">
-                  <div class="detail-box">
-                    <h1>
-                      ARCHITECT <br>
-                      BUILDER CONSTRUCTION <br>
-                      SERVICES
-                    </h1>
-                    <div class="btn-box">
-                      <a href="" class="btn1">
-                        Contact Us
-                      </a>
-                      <a href="" class="btn2">
-                        About Us
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="container ">
-              <div class="row">
-                <div class="col-md-10 mx-auto">
-                  <div class="detail-box">
-                    <h1>
-                      ARCHITECT <br>
-                      BUILDER CONSTRUCTION <br>
-                      SERVICES
-                    </h1>
-                    <div class="btn-box">
-                      <a href="" class="btn1">
-                        Contact Us
-                      </a>
-                      <a href="" class="btn2">
-                        About Us
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="container ">
-              <div class="row">
-                <div class="col-md-10 mx-auto">
-                  <div class="detail-box">
-                    <h1>
-                      ARCHITECT <br>
-                      BUILDER CONSTRUCTION <br>
-                      SERVICES
-                    </h1>
-                    <div class="btn-box">
-                      <a href="" class="btn1">
-                        Contact Us
-                      </a>
-                      <a href="" class="btn2">
-                        About Us
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="container ">
-              <div class="row">
-                <div class="col-md-10 mx-auto">
-                  <div class="detail-box">
-                    <h1>
-                      ARCHITECT <br>
-                      BUILDER CONSTRUCTION <br>
-                      SERVICES
-                    </h1>
-                    <div class="btn-box">
-                      <a href="" class="btn1">
-                        Contact Us
-                      </a>
-                      <a href="" class="btn2">
-                        About Us
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> -->
+   
         </div>
-        <!-- <ol class="carousel-indicators">
-          <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
-          <li data-target="#customCarousel1" data-slide-to="1"></li>
-          <li data-target="#customCarousel1" data-slide-to="2"></li>
-          <li data-target="#customCarousel1" data-slide-to="3"></li>
-          <li data-target="#customCarousel1" data-slide-to="4"></li>
-        </ol> -->
+   
       </div>
     </section>
 
     <!-- end slider section -->
   </div>
-
-  <!-- Projects -->
-  <section class="service_section layout_padding" style="margin-top: 60px;">
-    <div class="service_container">
-      <div class="container">
-        <div class="heading_container">
-          <h1>
-            Projects
-          </h1>
-        </div>
-        <a href="/project.html">
-        <div class="info-container">
-            <div class="info-box">
-                <h2 class="count">150</h2>
-                <p>Projects Completed</p>
+  <section class="about_section" style="margin:30px 0px 50px;">
+    <div class="container  ">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2 class="animate__animated animate__bounce">
+                About Us
+              </h2>
             </div>
-          <div class="info-box">
-              <h2 class="count">799</h2>
-              <p>Acres Allotted</p>
+            <p class="animate__animated ">
+              Welcome to PlannBiz Consulting Pvt. Ltd., your partner in comprehensive proposal development and business advisory services. We help businesses excel across various verticals, from initial concepts to fully operational projects.
+
+At PlannBiz Consulting, we drive real growth and positive transformation by leveraging our extensive experience and knowledge. We transform enterprise value chains into adaptive ecosystems that sense, learn, and evolve.
+
+In today's market, customers seek experiences, not just products. We enable businesses to build connected, cognitive networks that support innovation at scale. Our solutions empower enterprises to deliver personalized experiences, provide smart products, and build resilient value chains.
+
+Partner with PlannBiz Consulting to turn vision into reality and make a meaningful difference in your business and community.
+            </p>
           </div>
-          <div class="info-box">
-              <h2 class="count">32.28</h2>
-              <p>Lakh Sq Mtrs</p>
+        </div>
+        <div class="col-md-6 ">
+          <div class="img-box">
+            <img src="images/Consulting.jpg" alt="">
           </div>
-          <div class="info-box" >
-              
-               <div style="display: flex;"><h2>₹</h2>  <h2 class="count">9089</h2>   <h2> Cr</h2> </div>
-              <p>Project Value</p>
-          </div>
+        </div>
+
       </div>
-      
-    </a>
-        <div class="heading_container">
-          <div>
-            <table style="margin-top: 30px;">
-              <thead>
-                <tr>
-                    <th colspan="5">Projects Summary</th>
-                </tr>
-                  <tr>
-                      <th>Category</th>
-                      <th>No. of projects</th>
-                      <th>Area in Acre</th>
-                      <th>Space in Sq Mtrs</th>
-                      <th>Project Value INR Cr.</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <tr>
-                      <td>Amenity</td>
-                      <td>12</td>
-                      <td>30.85</td>
-                      <td>124,180</td>
-                      <td>598</td>
-                  </tr>
-                  <tr>
-                      <td>Infrastructure</td>
-                      <td>46</td>
-                      <td>304.67</td>
-                      <td>1,230,867</td>
-                      <td>3,169</td>
-                  </tr>
-                  <tr>
-                      <td>Manufacturing</td>
-                      <td>92</td>
-                      <td>463.75</td>
-                      <td>1,873,550</td>
-                      <td>5,322</td>
-                  </tr>
-                  <tr>
-                      <td><strong>Total</strong></td>
-                      <td><strong>150</strong></td>
-                      <td><strong>799.27</strong></td>
-                      <td><strong>3,228,597</strong></td>
-                      <td><strong>9,089</strong></td>
-                  </tr>
-              </tbody>
-          </table>
-            <div class="btn-box">
-            <div class="btn-box">
-              <a href="/project.html">
+    </div>
+  </section>
+  <div id="consult" style="background-color: #d8d2c6; padding: 30px;">
+    <div style="background-color: #fffff1; border-radius: 20px; padding: 50px; display: flex; justify-content: space-between; width: 100%;">
+        <div> 
+            <h1 class="fredoka" style="color: #191919 !important;"> Expertise Consultants for </h1> 
+             <div style="display: flex; flex-wrap: wrap; gap: 50px; margin-top: 20px;">
+              <div class="consultind">
+                <h2> Karnataka Udyog Mitra (KUM)</h2>
+                <p> eBiz is a Single Window System and is one of the integrated services
+                  projects and part of Mission Mode Projects (MMPs) under the National E-Governance
+                  Plan (NEGP) of the Government of India. <br/>
+                  Department of Industries and Commerce is committed to promote investment and trade
+in industry sector. Karnataka is the first State to enact Industries Facilitation Act in
+2002.
+                </p>
+                  <a href="kum.html">
+                    Read More
+                  </a>
+              </div>
+            <div class="consultind">
+              <h2> Karnataka Industrial Areas Development Board (KIADB)</h2>
+              <p> The Karnataka Industrial Areas Development Board has created comprehensive
+                infrastructure facilities for setting up of Industries in the State. Karnataka is one of the
+                most industrially advanced states in India, driven by its entrepreneurial spirit,
+                innovative outlook and a stable, approachable Government. These attributes have
+                made it the faster growing state in India, propelling the countrys growth to greater
+                heights..</p>
+                <a href="kiadb.html">
+                  Read More
+                </a>
+            </div>
+            <div class="consultind"> 
+              <h2> Ministry of Food processing Industries (MoFPI) – New Delhi</h2> 
+              <p>  A strong and dynamic food processing sector plays a vital role in reduction in the wastage of
+                perishable agricultural produce, enhancing shelf life of food products, ensuring value addition
+                to agricultural produce, diversification &amp;commercialization of agriculture, generation of
+                employment, enhancing income of farmers and creating surplus for the export of agro &amp;
+                processed foods. </p>
+                <a href="mofpi.html">
+                  Read More
+                </a>
+            </div>
+            <div class="consultind"> <h2> Agribusiness and Farming </h2>
+              <p>Agribusiness encompasses the economic sectors for farming and farming-related commerce. It
+                involves all the steps for getting agricultural goods to the market, including production,
+                processing, and distribution.
+                Agribusiness is the complete value chain in agriculture, from the raw materials and resources
+                necessary to create biological products to distributors and retailers that get products to end
+                consumers.</p> 
+                <a href="AgribusinessAndFarming.html">
+                  Read More
+                </a>
+            </div>
+            <div class="consultind"> <h2>Finance and Funding </h2> <p>Financing activities are transactions between a business and its lenders and owners to acquire
+              or return resources. In other words, financing activities fund the company, repay lenders, and
+              provide owners with a return on investment. Financing activities include: Issuing and
+              repurchasing equity. </p>
+              <a href="financeAndFunding.html">
+                Read More
+              </a>
+            </div>
+            <div class="consultind"> <h2> Startups </h2>  <p> Startup India Initiative has rolled out several programs with the objective of supporting
+              entrepreneurs, building a robust startup ecosystem and transforming India into a country of
+              job creators instead of job seekers</p>
+              <a href="startup.html">
                 Read More
               </a>
             </div>
           </div>
           </div>
-        </div>
-        </div>  
-       </div> 
-      </section>  
+        <!-- <div>
+          <img src="images/mission2.jpg" alt="mission" style="border-radius: 10px; min-width: 35vw; height: 100%; max-width: 35vw;"/>
+       </div> -->
+    </div>
+  </div>
 
-  <!-- service section -->
 
-  <section class="service_section layout_padding">
+  
+
+  <section class="service_section layout_padding" id="cat">
     <div class="service_container">
-      <div class="container ">
-        <div class="heading_container">
+        <div class="heading_container animate__animated animate__bounce">
           <h2>
             Categories
           </h2>
         </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-3">
-            <div class="box ">
-              <div class="img-box">
-                <img src="images/s1.png" alt="">
+        <div style="display: flex; gap:10px; flex-wrap: wrap; padding: 30px 60px;  justify-content: space-between;" id="inner">
+            <div class="box animate__animated" id="cat-box"  style="min-width: 400px; max-width: 30%; min-height: 400px; height: auto; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; border-radius: 20px; ">
+              <div>
+                <img src="images/Manufacturing.jpg" alt="" style="border-top-right-radius: 20px; border-top-left-radius: 20px; width: 100%; height: 250px; object-fit: cover;">
               </div>
-              <div class="detail-box">
+              <div class="detail-box" style="padding: 20px">
                 <h5>
                   Manufacturing
                 </h5>
                 <p>
                   PlannBiz Consulting has completed 92 projects spanning 464 acres, allocating 18.73 lakh square meters, with a cumulative project value of Rs. 5,322 crores
                 </p>
-                <a href="/project.html">
+                <a href="project.html?id=manufacturing">
                   Read More
                 </a>
-              </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="box ">
-              <div class="img-box">
-                <img src="images/s2.png" alt="">
+            <div class="box animate__animated" id="cat-box"  style="min-width: 400px; max-width: 30%;min-height: 400px;height: auto; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;; border-radius: 20px; ">
+              <div>
+                <img src="images/amenity.jpg" alt="" style="border-top-right-radius: 20px; border-top-left-radius: 20px; width: 100%; height: 250px; object-fit: cover;">
               </div>
-              <div class="detail-box">
+              <div class="detail-box" style="padding: 20px">
                 <h5>
                   Amenity
                 </h5>
                 <p>
                   In the Amenity sector, PlannBiz has completed 12 projects covering 14 acres, allocating 1.24 lakh square meters, with a total project value of Rs. 598 crores.
                 </p>
-                <a href="/project.html">
+                <a href="project.html?id=amenity">
                   Read More
                 </a>
               </div>
             </div>
+            <div class="box animate__animated" id="cat-box" style="min-width: 400px; max-width: 30%;  min-height: 400px; height: auto; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;border-radius: 20px; ">
+              <div>
+                <img src="images/Infrastructure.jpg" alt="" style="border-top-right-radius: 20px; border-top-left-radius: 20px; width: 100%; height: 250px;object-fit: cover;">
+              </div>
+              <div class="detail-box" style="padding: 20px">
+                <h5>
+                  Infrastructure
+                </h5>
+                <p>
+                  PlannBiz Consulting has completed 46 projects across 304 acres, allocating 12.30 lakh square meters, with a total project value of Rs. 3,169 crores.
+                </p>
+                <a href="project.html?id=infrastructure">
+                  Read More
+                </a>
+              </div>
+          </div>
           </div>
           <!-- <div class="col-md-6 col-lg-3">
             <div class="box ">
@@ -499,439 +590,16 @@ table {
               </div>
             </div>
           </div> -->
-          <div class="col-md-6 col-lg-3">
-            <div class="box ">
-              <div class="img-box">
-                <img src="images/s4.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Infrastructure
-                </h5>
-                <p>
-                  PlannBiz Consulting has completed 46 projects across 304 acres, allocating 12.30 lakh square meters, with a total project value of Rs. 3,169 crores.
-                </p>
-                <a href="">
-                  Read More
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+          
       </div>
     </div>
   </section>
 
-  <!-- end service section -->
-
-
-  <!-- about section -->
-
-  <section class="about_section" style="margin:30px 0px 50px;">
-    <div class="container  ">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="detail-box">
-            <div class="heading_container">
-              <h2>
-                About Us
-              </h2>
-            </div>
-            <p>
-              Welcome to PlannBiz Consulting Pvt. Ltd., your partner in comprehensive proposal development and business advisory services. We help businesses excel across various verticals, from initial concepts to fully operational projects.
-
-At PlannBiz Consulting, we drive real growth and positive transformation by leveraging our extensive experience and knowledge. We transform enterprise value chains into adaptive ecosystems that sense, learn, and evolve.
-
-In today's market, customers seek experiences, not just products. We enable businesses to build connected, cognitive networks that support innovation at scale. Our solutions empower enterprises to deliver personalized experiences, provide smart products, and build resilient value chains.
-
-Partner with PlannBiz Consulting to turn vision into reality and make a meaningful difference in your business and community.
-            </p>
-            <a href="/about.html">
-              Read More
-            </a>
-          </div>
-        </div>
-        <div class="col-md-6 ">
-          <div class="img-box">
-            <img src="images/aboutus.jpg" alt="">
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- end about section -->
+ 
 
 
 
-  <!-- project section -->
 
-  <!-- <section class="project_section layout_padding">
-    <div class="container">
-      <div class="heading_container">
-        <h2>
-          Projects
-        </h2>
-      </div>
-      <div class="carousel-wrap ">
-        <div class="filter_box">
-          <h6>
-            Category filter
-          </h6>
-          <nav class="owl-filter-bar">
-            <a href="#" class="item active" data-owl-filter="*">All</a>
-            <a href="#" class="item" data-owl-filter=".painting">Painting</a>
-            <a href="#" class="item" data-owl-filter=".reconstruction">Reconstruction </a>
-            <a href="#" class="item" data-owl-filter=".repair">Repairs </a>
-            <a href="#" class="item" data-owl-filter=".residential">Residential </a>
-            <a href="#" class="item" data-owl-filter=".styling">Styling </a>
-          </nav>
-        </div>
-
-        <div class="owl-carousel project_carousel">
-          <div class="item painting">
-            <div class="box">
-              <div class="img-box">
-                <img src="images/project1.jpg" alt="" />
-                <a href="" class="pin_link">
-                  <i class="fa fa-link" aria-hidden="true"></i>
-                </a>
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Interior work
-                </h5>
-                <p>
-                  alteration in some form, by injected humour, or randomised words which don't look even slightly
-                  believable. If you are going to use
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="item reconstruction">
-            <div class="box">
-              <div class="img-box">
-                <img src="images/project2.jpg" alt="" />
-                <a href="" class="pin_link">
-                  <i class="fa fa-link" aria-hidden="true"></i>
-                </a>
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Interior work
-                </h5>
-                <p>
-                  alteration in some form, by injected humour, or randomised words which don't look even slightly
-                  believable. If you are going to use
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="item repair">
-            <div class="box">
-              <div class="img-box">
-                <img src="images/project1.jpg" alt="" />
-                <a href="" class="pin_link">
-                  <i class="fa fa-link" aria-hidden="true"></i>
-                </a>
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Interior work
-                </h5>
-                <p>
-                  alteration in some form, by injected humour, or randomised words which don't look even slightly
-                  believable. If you are going to use
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="item residential">
-            <div class="box">
-              <div class="img-box">
-                <img src="images/project1.jpg" alt="" />
-                <a href="" class="pin_link">
-                  <i class="fa fa-link" aria-hidden="true"></i>
-                </a>
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Interior work
-                </h5>
-                <p>
-                  alteration in some form, by injected humour, or randomised words which don't look even slightly
-                  believable. If you are going to use
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="item styling">
-            <div class="box">
-              <div class="img-box">
-                <img src="images/project1.jpg" alt="" />
-                <a href="" class="pin_link">
-                  <i class="fa fa-link" aria-hidden="true"></i>
-                </a>
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Interior work
-                </h5>
-                <p>
-                  alteration in some form, by injected humour, or randomised words which don't look even slightly
-                  believable. If you are going to use
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-  <!-- end project section -->
-
-  <!-- client section -->
-  <!-- <section class="client_section layout_padding">
-    <div class="container">
-      <div class="heading_container heading_center">
-        <h2>
-          Testimonial
-        </h2>
-      </div>
-    </div>
-    <div id="customCarousel2" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-10 mx-auto">
-                <div class="box">
-                  <div class="img-box">
-                    <img src="images/client.jpg" alt="">
-                  </div>
-                  <div class="detail-box">
-                    <div class="client_info">
-                      <div class="client_name">
-                        <h5>
-                          Morojink
-                        </h5>
-                        <h6>
-                          Customer
-                        </h6>
-                      </div>
-                      <i class="fa fa-quote-left" aria-hidden="true"></i>
-                    </div>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                      labore
-                      et
-                      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                      aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                      cillum
-                      dolore eu fugia
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-10 mx-auto">
-                <div class="box">
-                  <div class="img-box">
-                    <img src="images/client.jpg" alt="">
-                  </div>
-                  <div class="detail-box">
-                    <div class="client_info">
-                      <div class="client_name">
-                        <h5>
-                          Morojink
-                        </h5>
-                        <h6>
-                          Customer
-                        </h6>
-                      </div>
-                      <i class="fa fa-quote-left" aria-hidden="true"></i>
-                    </div>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                      labore
-                      et
-                      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                      aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                      cillum
-                      dolore eu fugia
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-10 mx-auto">
-                <div class="box">
-                  <div class="img-box">
-                    <img src="images/client.jpg" alt="">
-                  </div>
-                  <div class="detail-box">
-                    <div class="client_info">
-                      <div class="client_name">
-                        <h5>
-                          Morojink
-                        </h5>
-                        <h6>
-                          Customer
-                        </h6>
-                      </div>
-                      <i class="fa fa-quote-left" aria-hidden="true"></i>
-                    </div>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                      labore
-                      et
-                      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                      aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                      cillum
-                      dolore eu fugia
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <ol class="carousel-indicators">
-        <li data-target="#customCarousel2" data-slide-to="0" class="active"></li>
-        <li data-target="#customCarousel2" data-slide-to="1"></li>
-        <li data-target="#customCarousel2" data-slide-to="2"></li>
-      </ol>
-    </div>
-  </section> -->
-  <!-- end client section -->
-
-  <!-- why us section -->
-
-  <!-- <section class="why_us_section layout_padding">
-    <div class="container">
-      <div class="heading_container">
-        <h2>
-          Why Choose Us?
-        </h2>
-      </div>
-      <div class="why_us_container">
-        <div class="box">
-          <div class="img-box">
-            <img src="images/w1.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Project done on time
-            </h5>
-            <p>
-              Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC,
-              making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in
-              Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-              going through the
-            </p>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="images/w2.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Always avaliable
-            </h5>
-            <p>
-              Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC,
-              making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in
-              Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-              going through the
-            </p>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="images/w3.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Professional and responsible
-            </h5>
-            <p>
-              Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC,
-              making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in
-              Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-              going through the
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="btn-box">
-        <a href="">
-          Read More
-        </a>
-      </div>
-    </div>
-  </section> -->
-
-  <!-- end why us section -->
-
-  <!-- contact section -->
-  <!-- <section style="margin-top: 40px;" class="contact_section layout_padding-bottom">
-    <div class="container-fluid">
-      <div class="col-lg-4 col-md-5 offset-md-1">
-        <div class="heading_container">
-          <h2>
-            Contact Us
-          </h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-4 col-md-5 offset-md-1">
-          <div class="form_container">
-            <form action="">
-              <div>
-                <input type="text" placeholder="Your Name" />
-              </div>
-              <div>
-                <input type="text" placeholder="Phone Number" />
-              </div>
-              <div>
-                <input type="email" placeholder="Email" />
-              </div>
-              <div>
-                <input type="text" class="message-box" placeholder="Message" />
-              </div>
-              <div class="btn_box">
-                <button>
-                  SEND
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="col-lg-7 col-md-6 px-0">
-          <div class="map_container">
-            <div class="map">
-              <div id="googleMap"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-  <!-- end contact section -->
 
   <!-- info section -->
   <section class="info_section ">
@@ -1080,16 +748,59 @@ Partner with PlannBiz Consulting to turn vision into reality and make a meaningf
   </script>
   <!-- End Google Map -->
   <script>
-    $('.count').each(function () {
-    $(this).prop('Counter',0).animate({
-        Counter: $(this).text()
-    }, {
-        duration: 10000,
-        easing: 'swing',
-        step: function (now) {
-            $(this).text(Math.ceil(now));
-        }
+     $(document).ready(function() {
+            let observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        $(entry.target).prop('Counter', 0).animate({
+                            Counter: $(entry.target).text()
+                        }, {
+                            duration: 2000,
+                            easing: 'swing',
+                            step: function (now) {
+                                $(this).text(Math.ceil(now));
+                            }
+                        });
+                        observer.unobserve(entry.target); // Stop observing after animation
+                    }
+                });
+            }, { threshold: 0.5 }); // Trigger when 50% of the element is visible
+
+            $('.count').each(function() {
+                observer.observe(this);
+            });
+        });
+  </script>
+
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const observerOptions = {
+    root: null, // Use the viewport as the root
+    rootMargin: "0px",
+    threshold: 0.1 // Trigger when 10% of the element is visible
+  };
+
+  const callback = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const target = entry.target;
+        // Find all classes that start with "animate"
+        const animateClasses = [...target.classList].filter(cls => cls.startsWith('animate'));
+        // Remove all animate classes
+        animateClasses.forEach(cls => target.classList.remove(cls));
+        void target.offsetWidth; // Trigger a reflow
+        // Add all animate classes back
+        animateClasses.forEach(cls => target.classList.add(cls));
+      }
     });
+  };
+
+  const observer = new IntersectionObserver(callback, observerOptions);
+
+  const animatedDivs = document.querySelectorAll(".animate__animated");
+  animatedDivs.forEach(div => {
+    observer.observe(div);
+  });
 });
   </script>
 </body>
