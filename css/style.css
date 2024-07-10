@@ -1325,7 +1325,7 @@ a:focus {
 
 .holder2 {
   display: flex;
-  align-items: center;
+  align-items: center;s
   gap: 15px;
   font-size: 12px;
 }
@@ -1342,4 +1342,11 @@ a:focus {
 .nav-link.dropdown-toggle:hover {
   background-color: rgb(24, 64, 24);
   color: white;
+}
+.info_section  .container .contact_nav{
+  display: none !important;
+}
+
+.header_section .header_top{
+  display: none !important;
 }
